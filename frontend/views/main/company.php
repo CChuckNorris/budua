@@ -1,0 +1,91 @@
+<?php ;
+
+use kartik\tabs\TabsX;
+
+\frontend\assets\ProfileAsset::register($this);
+$this->title = $company->seo_title;
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => $company->seo_desc
+]);
+$this->registerMetaTag([
+    'name' => 'keywords',
+    'content' => $company->seo_keys
+]);
+?>
+
+<?= $this->render("company-partials/_head_info", ["company" => $company]) ?>
+
+<?= $this->render("company-partials/_info", ["company" => $company]) ?>
+
+<?php if (!empty($company["activities"])): ?>
+    <div class="section-subtitle small top-offset-larger bottom-offset align-left md-align-center">Специализация</div>
+    <?= \frontend\components\CompanyActivityDirectionsWidget::widget(["items" => $company["activities"]]) ?>
+<?php endif; ?>
+
+<?php if (!empty($company["clients"])): ?>
+    <div class="section-subtitle small top-offset bottom-offset align-left md-align-center">Среди клиентов компании
+    </div>
+    <?= \frontend\components\CompanyClientsWidget::widget(["items" => $company["clients"]]) ?>
+<?php endif; ?>
+
+<?php if (!empty($company["casesFiles"])): ?>
+    <div class="section-subtitle small top-offset bottom-offset align-left md-align-center">Кейсы</div>
+    <?= \frontend\components\CompanyImageCarouselWidget::widget(["items" => $company["casesFiles"]]) ?>
+<?php endif; ?>
+
+<?php if (!empty($company["reviewsAndThanksFiles"])): ?>
+    <div class="section-subtitle small top-offset bottom-offset align-left md-align-center">Отзывы и благодарности
+        клиентов
+    </div>
+    <?= \frontend\components\CompanyImageCarouselWidget::widget(["items" => $company["reviewsAndThanksFiles"]]) ?>
+<?php endif; ?>
+
+<?= $this->render("company-partials/_about", ["company" => $company]) ?>
+
+
+<?php
+
+
+$items = [
+    [
+        'label' => '<i class="glyphicon glyphicon-home"></i> Комментарии',
+        'content' => $this->render("company-partials/_reviews", [
+            "model" => $model,
+            "company" => $company,
+            "comments" => $comments,
+            "sort" => $sort,
+            "sort_desc" => $sort_desc,
+            "alias" => $alias,
+            "fbhref" => $fbhref,
+            "vkhref" => $vkhref
+        ]),
+        'active' => true
+    ],
+    [
+        'label' => 'Новости',
+        'content' => \frontend\components\SocialNewsWidget::widget(
+            [
+                "entity" => $company,
+                "vk_wall" => $wall,
+                "fb_wall" => $fb_wall,
+                "cache_duration" => $wall_cach
+            ]),
+        'active' => false
+    ]
+];
+
+echo TabsX::widget([
+    'items' => $items,
+    'position' => TabsX::POS_ABOVE,
+    'encodeLabels' => false,
+    'enableStickyTabs' => true
+]);
+
+?>
+
+
+<?= $this->render("/layouts/_h-banner-template"); ?>
+
+
+<?= $this->render("/alerts/_auth_alert") ?>
