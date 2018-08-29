@@ -1,14 +1,14 @@
 <?php
 $db = [
     "prod"=>[
-        "host"=> 'credit06.mysql.ukraine.com.ua',
-        "dbname" => 'credit06_seostar',
-        "username" => 'credit06_seostar',
-        "password" => 'ennkbjny'
+        "host"=> '',
+        "dbname" => '',
+        "username" => '',
+        "password" => ''
     ],
     "local" => [
         "host"=> 'localhost',
-        "dbname" => 'seo_stars',
+        "dbname" => 'budua',
         "username" => 'root',
         "password" => ''
     ],

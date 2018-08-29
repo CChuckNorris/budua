@@ -15,4 +15,6 @@ class WidgetsNamesHolder
     const SIDEBAR_BANNER = "sidebar_banner";
 
     const HORIZONTAL_BANNER = "horizontal_banner";
+
+    const INFO_BLOCK_1 = "info_block_1";
 }

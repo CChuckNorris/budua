@@ -12,9 +12,9 @@ class TemplateV2Asset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/bundle.min.css',
-        'css/custom.css',
-        'css/pagination.css'
+        'css/bundle.css',
+        'css/landing.css',
+        'css/custom.css'
 
     ];
     public $js = [

@@ -1,81 +1,77 @@
 <?php
 
-use yii\data\ArrayDataProvider;
-use yii\grid\GridView;
+use common\data_mappers\WidgetSettingsDataMapper;
+use common\helpers\WidgetsNamesHolder;
+use common\managers\WidgetSettingsProvider;
+use common\models\WidgetsSettings;
+use yii\helpers\Url;
+use yii\helpers\Html;
 
 $theme = Yii::$app->theme->getSettings();
 $this->title = $theme->main_title;
 
 $this->registerMetaTag([
-    'name'=>'description',
-    'content'=>$theme->main_desc
+    'name' => 'description',
+    'content' => $theme->main_desc
 ]);
 $this->registerMetaTag([
-    'name'=>'keywords',
-    'content'=>$theme->main_keys
+    'name' => 'keywords',
+    'content' => $theme->main_keys
 ]);
 
+/**
+ * @var WidgetSettingsProvider $widgetSettingsProvider
+ */
+ $widgetSettingsProvider = new WidgetSettingsProvider(new WidgetSettingsDataMapper(new WidgetsSettings()), new WidgetsNamesHolder());
+
+ $infoBlock1 = $widgetSettingsProvider->getInfoBlock1WidgetSettings();
 ?>
 
 <section class="main-banner">
-    <?= $this->render("landing-partials/_main_banner", ["widgetSettings" => $widgetSettings]) ?>
+    <?= $this->render("landing-partials/_counters", ["widgetSettings" => $widgetSettings]) ?>
 </section>
 
-<!--<div id="paginator">
-    <div id="items"></div>
-</div>-->
-
-<section class="section bg-stars">
+<section class="section map">
     <div class="container">
-
-<?php \yii\widgets\Pjax::begin(); ?>
-<?php
-$dataProvider  = new ArrayDataProvider([
-    'allModels' => \common\models\Company::find()->asArray()->all(),
-    'pagination' => [
-        'pageSize' => 3,
-    ],
-]);
-
-?>
-<?= GridView::widget([
-    'dataProvider' => $dataProvider,
-    'showHeader'=> false,
-    'summary'=>'',
-    'columns' => [
-        [
-            'attribute' => 'logo',
-            'format' => 'raw',
-            'value' => function($model)
-            {
-                return \yii\helpers\Html::img('/frontend/web/mt/img/'.$model['logo'], ['width' => '128px']);
-            }
-        ],
-        'name',
-        'regions',
-        'reviews',
-        'raiting',
-    ],
-]) ?>
-<?php \yii\widgets\Pjax::end(); ?>
-    </div>
-</section>
-<section class="section bg-stars">
-    <div class="container">
-        <?= $this->render("landing-partials/_companies_ratings_seo", ["companyRatings" => $companyRatings]) ?>
-
-        <?= $this->render("landing-partials/_companies_ratings_teaching_seo", ["companyRatings" => $companyRatings]) ?>
+        <img src="../img/map.png">
     </div>
 </section>
 
-<section class="section bg-small-stars">
-    <div class="container">
-        <?= $this->render("landing-partials/_popular_activities_directions") ?>
 
-        <?= $this->render("landing-partials/_companies_ratings_country", ["companyRatings" => $companyRatings, 'themeSettings' => $themeSettings]) ?>
+<section class="section bg pattern">
+    <div class="align-center">
+        <h2 class="section-title lined bottom-offset">Лучшие застройщики</h2>
+    </div>
+    <div class="row">
+        <?= \frontend\components\CompaniesLogosGridWidget::widget(["items" => $companyRatings->getTopCompanies(), "target_url" => "main/company", "template" => 3]) ?>
+    </div>
+    <div class="row">
+        <?= Html::a("Все застройщики", Url::to('/raiting'), ['class' => 'btn btn-rounded']) ?>
     </div>
 </section>
 
-<section class="section bg-stars-2">
-    <?= $this->render("landing-partials/_reviews", ["reviews" => $reviews]) ?>
+<section class="section activity-directions">
+    <div class="container">
+        <div class="row"><?= \frontend\components\PopularActivityDirectionsWidget::widget() ?>
+        </div>
+    </div>
+</section>
+
+<section class="section info-block">
+    <div class="row">
+            <div class="container">
+                <div class="col-md-6 content-holder">
+                    <div class="info">
+                        <h2 class="section-title lined bottom-offset"> <?= $infoBlock1->getHeader() ?></h2>
+                        <div class="content">
+                            <?= $infoBlock1->getContent() ?>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <?= Html::img($infoBlock1->getPlaceholder()) ?>
+                </div>
+            </div>
+        </div>
 </section>

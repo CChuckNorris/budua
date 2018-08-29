@@ -32,12 +32,7 @@ class CompanyRatings
         return $this->repository->getTableMain($this->settings->regions3, $this->settings->tags3, $this->settings->limit3, $this->settings->sort3);
     }
 
-    public function getTopTeachingSEO()
-    {
-       return $this->repository->findBestEDCompanies();
-    }
-
-    public function getTopSEO()
+    public function getTopCompanies()
     {
         return $this->repository->findBestCompanies();
     }

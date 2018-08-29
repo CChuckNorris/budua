@@ -172,27 +172,6 @@ ul.sort li {
 
 }
 
-.rating-companies-list > li .image-contain {
-
-    padding-top: 0;
-
-    height: 100px;
-
-}
-
-.rating-companies-list.horizontal > li .image-contain {
-
-    padding-top: 100%;
-
-}
-
-.company-logo .image-contain {
-
-    padding-top: 0;
-
-    height: 100px;
-
-}
 
 /*
 
@@ -589,9 +568,29 @@ ul.sort li {
     margin: 20px;
 }
 
-ul.popular-promotion li a,
-.popular-promotion.smaller-link>li a,
-.popular-promotion.vertical>li a
+
+.btn.btn-rounded
 {
-    font-size: 13px;
+    width: 230px;
+    margin: 60px auto 0 auto;
+    border: 1px solid #00b795;
+    color: #00b795;
+    padding: 10px 0;
+    text-align: center;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.btn.btn-rounded:hover
+{
+    border: 1px solid #fff;
+    background-color: #00b795;
+    color: #fff;
+}
+
+.popular-promotion li a
+{
+    border-radius: 10px;
+
 }

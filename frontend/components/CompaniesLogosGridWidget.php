@@ -24,7 +24,31 @@ class CompaniesLogosGridWidget extends Widget
 
     public function run()
     {
-        return $this->render("companies-logos-grid-widget/view".$this->template, ["items" => $this->items, "img_dir" => $this->img_dir, "target_url" => $this->target_url]);
+        return $this->render("companies-logos-grid-widget/view".$this->template, [
+            "widget" => $this,
+            "items" => $this->items
+        ]);
+    }
+
+    public function getRegionsList($regions, $limit = 3)
+    {
+        foreach (explode(',', $regions) as $r_key => $region) {
+            if ($r_key == $limit) {
+                echo "<p class='region'>...</p>";
+                break;
+            }
+            echo "<p class='region'>$region</p>";
+        }
+    }
+
+    public function getLogoPath($item)
+    {
+        return  $this->img_dir . $item['logo'];
+    }
+
+    public function getTargetUrl()
+    {
+        return $this->target_url;
     }
 
 }

@@ -4,6 +4,7 @@ namespace common\managers;
 
 use common\data_mappers\WidgetSettingsDataMapper;
 use common\helpers\WidgetsNamesHolder;
+use common\models\InfoBlock;
 
 /**
  * Class WidgetSettingsProvider
@@ -57,6 +58,22 @@ class WidgetSettingsProvider
         $key = $class_name::HORIZONTAL_BANNER;
 
         return $this->dataMapper->findByPrimaryKey($key)->options;
+    }
+
+    /**
+     * @return InfoBlock
+     */
+    public function getInfoBlock1WidgetSettings()
+    {
+        /** @var WidgetsNamesHolder $class_name */
+        $class_name = get_class($this->WidgetsNamesHolder);
+        $key = $class_name::INFO_BLOCK_1;
+
+        $options = $this->dataMapper->findByPrimaryKey($key)->options;
+
+        $InfoBlock = new InfoBlock($options["header"], $options["content"], $options["file_path"]);
+
+        return $InfoBlock;
     }
 
 }
