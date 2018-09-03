@@ -116,6 +116,19 @@ ul.sort li {
     padding-top: 0;
 }
 
+.main-footer .footer-menu a
+{
+    line-height: 1.71;
+}
+
+.main-footer .footer-menu a,
+.main-footer .footer-menu a:visited,
+.main-footer .footer-menu a:hover
+{
+    color: #fff;
+}
+
+
 .social-title
 {
     padding-left: 15px;
@@ -594,3 +607,50 @@ ul.sort li {
     border-radius: 10px;
 
 }
+
+
+.bg.pattern,
+.bg2.pattern
+{
+    position: relative;
+}
+
+.bg .section-title,
+.bg2 .section-title
+{
+    color: #fff;
+}
+
+.bg.pattern *,
+.bg2.pattern *
+{
+    z-index: 1;
+}
+.bg.pattern:before,
+.bg2.pattern:before
+{
+    content: '';
+    display: block;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(../img/pattern2.png) repeat;
+    top: 0;
+    z-index: 0;
+}
+
+.bg2.pattern:before
+{
+    background: url(../img/pattern3.png) repeat;
+}
+
+.bg
+{
+    background-color: #004e5d;
+}
+
+.bg2
+{
+    background-color: #004654;
+}
+

@@ -5,7 +5,7 @@ namespace frontend\components;
 use common\helpers\ReviewColorProvider;
 use yii\base\Widget;
 
-class CompanyLastReviewsWidget extends Widget
+class CompanyLastReviewsWidget extends UserReviewsWidget
 {
     public $items;
 

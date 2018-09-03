@@ -188,15 +188,7 @@ if ($('.image-carousel').length > 0) {
   $(this).toggleClass('active');
   $($(this).data('toggle')).toggleClass('active');
 });
-;$(window).on('load resize', function() {
-  var maxHeight;
-  maxHeight = 0;
-  $('.testimonials-list-row').find('.testimonial-card').height('auto').each(function() {
-    if ($(this).height() > maxHeight) {
-      maxHeight = $(this).height();
-    }
-  }).height(maxHeight);
-});
+
 ;if ($('.about-person-carousel').length > 0) {
   $('.about-person-carousel').magnificPopup({
     delegate: 'a',

@@ -8,11 +8,11 @@ namespace common\helpers;
  */
 class ReviewColorProvider
 {
-    const LOW = "colored-pink";
+    const LOW = "low-review-color";
 
-    const MEDIUM = "colored-blue";
+    const MEDIUM = "medium-review-color";
 
-    const EXCELLENT = "colored-green";
+    const EXCELLENT = "hight-review-color";
 
     public function getColoredClass($stars)
     {

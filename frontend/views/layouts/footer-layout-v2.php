@@ -2,12 +2,12 @@
 use yii\helpers\Url;
 
 ?>
-<footer class="main-footer">
+<footer class="main-footer bg2 pattern">
     <div class="container">
         <div class="row center-xs start-ms">
-            <div class="col-xs-12 col-ms-2 col-ms-offset-1">
+            <div class="col-xs-12 col-ms-2 ">
                 <a href="<?=Url::toRoute(['main/index']);?>" class="logo-footer">
-                    <img src="<?=\yii\helpers\Url::to("/img/logo-footer.png")?>" alt="Seo-stars">
+                    <img src="<?=\yii\helpers\Url::to("/img/logo-white.png")?>" alt="Seo-stars">
                 </a>
             </div>
             <div class="col-xs-12 col-ms-2 col-sm-2">

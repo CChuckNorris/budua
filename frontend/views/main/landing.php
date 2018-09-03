@@ -59,19 +59,32 @@ $this->registerMetaTag([
 
 <section class="section info-block">
     <div class="row">
-            <div class="container">
-                <div class="col-md-6 content-holder">
-                    <div class="info">
-                        <h2 class="section-title lined bottom-offset"> <?= $infoBlock1->getHeader() ?></h2>
-                        <div class="content">
-                            <?= $infoBlock1->getContent() ?>
-                        </div>
+        <div class="container">
+            <div class="col-md-6 content-holder">
+                <div class="info">
+                    <h2 class="section-title lined bottom-offset"> <?= $infoBlock1->getHeader() ?></h2>
+                    <div class="content">
+                        <?= $infoBlock1->getContent() ?>
                     </div>
                 </div>
+            </div>
 
-                <div class="col-md-6">
-                    <?= Html::img($infoBlock1->getPlaceholder()) ?>
-                </div>
+            <div class="col-md-6">
+                <?= Html::img($infoBlock1->getPlaceholder()) ?>
             </div>
         </div>
+    </div>
+</section>
+
+
+
+<section class="section recent-reviews">
+    <div class="align-center">
+        <h2 class="section-title lined bottom-offset">Последние отзывы</h2>
+    </div>
+    <div class="row">
+        <div class="col-xs-12 col-lg-10 col-lg-offset-1">
+            <?= \frontend\components\CompanyLastReviewsWidget::widget(["items" => $reviews])?>
+        </div>
+    </div>
 </section>

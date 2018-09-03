@@ -120,10 +120,6 @@
     width: 100%;
 }
 
-.section.bg
-{
-    background-color: #004e5d;
-}
 
 @media (max-width: 1200px)
 {
@@ -303,10 +299,7 @@
 {
     margin-right: 0;
 }
-.bg .section-title
-{
-    color: #fff;
-}
+
 
 @media (max-width: 1477px)
 {
@@ -365,27 +358,6 @@
 .section.info-block
 {
     padding-top: 10px;
-}
-
-.section.bg.pattern 
-{
-    position: relative;
-}
-
-.section.bg.pattern *
-{
-    z-index: 1;
-}
-.bg.pattern:before
-{
-    content: '';
-    display: block;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background: url(../img/pattern2.png) repeat;
-    top: 0;
-    z-index: 0;
 }
 
 @media (max-width: 992px)
@@ -498,5 +470,86 @@
         text-align: center;
     }
 
+}
+
+/* Recent Reviews */
+
+.section.recent-reviews ul
+{
+    text-align: center;
+}
+
+
+.section.recent-reviews ul li
+{
+    width: 570px;
+    margin-bottom: 50px;
+}
+
+.section.recent-reviews ul li .testimonial-card
+{
+    max-height: 385px;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+.section.recent-reviews .text
+{
+    text-align: justify;
+    max-height: 315px;
+    overflow: hidden;
+}
+.section.recent-reviews .col-md-6 
+{
+    position: relative;
+}
+
+.section.recent-reviews .avatar,
+.section.recent-reviews .info
+{
+    padding: 0;
+}
+
+
+@media (max-width: 768px)
+{
+
+    .section.recent-reviews ul li .testimonial-card
+    {
+        max-height: 495px;
+    }
+
+    .section.recent-reviews ul li
+    {
+        display: inline-block;
+    }
+}
+@media (min-width: 481px) and (max-width: 1024px)
+{
+    .section.recent-reviews ul li
+    {
+        width: 485px;
+    }
+}
+
+
+@media (max-width: 480px)
+{
+
+    .section.recent-reviews ul li
+    {
+        width: 100%;
+        padding: 0;
+    }
+
+    .testimonial-card.shadow
+    {
+        box-shadow: none;
+    }
+
+    .testimonial-card
+    {
+        padding: 35px 0px 30px;
+    }
 
 }

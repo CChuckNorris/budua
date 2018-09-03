@@ -19,7 +19,6 @@ class TemplateV2Asset extends AssetBundle
     ];
     public $js = [
         'js/init/data-toggle.js',
-        'js/init/height-blocks.js',
         'js/init/mobile-menu.js',
         'js/main.js',
 

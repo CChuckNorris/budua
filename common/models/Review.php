@@ -142,6 +142,6 @@ class Review extends \yii\db\ActiveRecord
     }
     public function getLast()
     {
-        return static::find()->orderBy('id DESC')->limit(3)->all();
+        return static::find()->orderBy('id DESC')->limit(6)->all();
     }
 }

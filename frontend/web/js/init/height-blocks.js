@@ -1,3 +1,4 @@
+/*
 $(window).on('load resize', function() {
   var maxHeight;
   maxHeight = 0;
@@ -7,3 +8,4 @@ $(window).on('load resize', function() {
     }
   }).height(maxHeight);
 });
+*/
