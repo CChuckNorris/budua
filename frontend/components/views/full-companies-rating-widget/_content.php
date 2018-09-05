@@ -1,4 +1,4 @@
-<li class="stage-little">
+<li class="stage-little risk-badge">
     <table>
         <tr>
             <td class="numb"><?= $key + 1; ?></td>

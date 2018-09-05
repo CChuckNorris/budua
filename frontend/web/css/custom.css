@@ -723,11 +723,41 @@ ul.companies-rating-list-wiget
 ul.companies-rating-list-wiget > li
 {
     height: 115px;
+    position: relative;
     margin-bottom: 20px;
     padding: 10px 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
     background-color: #fff;
+}
+
+ul.companies-rating-list-wiget > li.checked-badge:after,
+ul.companies-rating-list-wiget > li.vip-badge:after,
+ul.companies-rating-list-wiget > li.risk-badge:after
+{
+    content: '';
+    display: block;
+    /* background-size: initial; */
+    position: absolute;
+    width: 94px;
+    height: 99px;
+    top: -9px;
+    left: -9px;
+}
+
+ul.companies-rating-list-wiget > li.checked-badge:after
+{
+    background: url(../img/checked-badge.png) no-repeat;
+}
+
+ul.companies-rating-list-wiget > li.vip-badge:after
+{
+    background: url(../img/vip-badge.png) no-repeat;
+}
+
+ul.companies-rating-list-wiget > li.risk-badge:after
+{
+    background: url(../img/risk-badge.png) no-repeat;
 }
 
 .companies-rating-list-wiget tr td .tip
@@ -792,6 +822,18 @@ ul.companies-rating-list-wiget > li
 .pinned-block .section-title
 {
     color: #fff;
+}
+.sorting-ctrl .dropdown-title,
+.sorting-ctrl .ae-select-content,
+.sorting-ctrl .icon-angle-arrow-down
+
+{
+    color: #fff;
+}
+
+.sorting-ctrl
+{
+    height: 45px;
 }
 
 @media (max-width: 991px)

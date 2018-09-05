@@ -10,6 +10,12 @@ use yii\web\AssetBundle;
 class CommonTemplateAsset extends TemplateV2Asset
 {
 
+    public $js = [
+        'js/init/data-toggle.js',
+        'js/init/mobile-menu.js',
+        'js/main.js',
+        'js/review-controls.js'
+    ];
 
     public $depends = [
         'yii\web\YiiAsset',

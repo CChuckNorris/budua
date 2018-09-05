@@ -15,13 +15,22 @@ $this->registerMetaTag([
 
 ?>
 
-<div class="align-center">
-    <div class="section-title blue-lined bottom-offset"><?= $activity->h1_title; ?></div>
+<div class="pinned-block">
+
+    <div class="align-center">
+        <h2 class="section-title lined bottom-offset"><?= $activity->h1_title; ?></h2>
+    </div>
+
+    <?= \frontend\components\RatingSortControlsWidget::widget(
+        [
+            "sort" => $sort,
+            "sort_desc" => $sort_desc
+        ]);
+    ?>
+
+    <?= \frontend\components\FullCompaniesRatingWidget::widget(['items' => $items]) ?>
 </div>
 
-<?=
-    \frontend\components\FullCompaniesRatingWidget::widget(["items" => $items])
-?>
 
 <?php if (!empty($activity->about)):?>
     <div class="section-subtitle small top-offset align-left md-align-center">О <?= $activity->title; ?></div>

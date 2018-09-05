@@ -23,5 +23,12 @@ $this->registerMetaTag([
         <h2 class="section-title lined bottom-offset"><?= $seo->raiting_h1; ?></h2>
     </div>
 
+    <?= \frontend\components\RatingSortControlsWidget::widget(
+        [
+            "sort" => $sort,
+            "sort_desc" => $sort_desc
+        ]);
+    ?>
+
     <?= \frontend\components\FullCompaniesRatingWidget::widget(['items' => $companies]) ?>
 </div>

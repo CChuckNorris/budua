@@ -14,18 +14,24 @@ $this->registerMetaTag([
 ]);
 ?>
 
-<div class="align-center">
-    <div class="section-title blue-lined bottom-offset">
-        <?php if ($page->h2): ?>
-            <?= $page->h2; ?>
-        <?php else: ?>
-            <?= $page->h1; ?>
-        <?php endif; ?>
+
+<div class="pinned-block">
+
+    <div class="align-center">
+        <h2 class="section-title lined bottom-offset">
+            <?php if ($page->h2): ?>
+                <?= $page->h2; ?>
+            <?php else: ?>
+                <?= $page->h1; ?>
+            <?php endif; ?></h2>
     </div>
+
+    <?= \frontend\components\RatingSortControlsWidget::widget(
+        [
+            "sort" => $sort,
+            "sort_desc" => $sort_desc
+        ]);
+    ?>
+
+    <?= \frontend\components\FullCompaniesRatingWidget::widget(['items' => $companies]) ?>
 </div>
-<div class="table-responsive">
-
-    <?= \frontend\components\SeoEducationRatingWidget::widget(["items" => $companies]) ?>
-
-</div>
-

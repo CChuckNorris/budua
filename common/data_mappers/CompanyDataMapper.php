@@ -27,6 +27,20 @@ class CompanyDataMapper
         return $this->basicQuery()->where(["activity_direction.alias" => $activity_alias])->orderBy(['mod_rating' => SORT_DESC])->asArray()->all();
     }
 
+    public function getSortedBy($sort, $sort_desc)
+    {
+        $sort_type = $sort_desc == 'desc' ? SORT_DESC : SORT_ASC;
+
+        if ($sort == 'popular') {
+            return $this->basicQuery()->orderBy(['reviews' => $sort_type])->asArray()->all();
+        }
+
+        if ($sort == 'bad-good') {
+            return $this->basicQuery()->joinWith('reviewsInfo')->select('company.*, SUM(review.stars) as amountStars')->groupBy(['review.company_id'])->orderBy(['amountStars' => $sort_type])->asArray()->all();
+        }
+
+    }
+
     private function basicQuery()
     {
         return $this->repository->find()->joinWith($this->getRelations());

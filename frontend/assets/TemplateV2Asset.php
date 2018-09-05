@@ -21,7 +21,6 @@ class TemplateV2Asset extends AssetBundle
         'js/init/data-toggle.js',
         'js/init/mobile-menu.js',
         'js/main.js',
-
     ];
 
     public $jsOptions = array(

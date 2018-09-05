@@ -317,4 +317,8 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
         return $this->hasMany(CompanyReviewsAndThanks::className(), ['company_id' => 'id']);
     }
 
+    public function getReviewsInfo()
+    {
+        return $this->hasMany(Review::className(), ['company_id' => 'id']);
+    }
 }
