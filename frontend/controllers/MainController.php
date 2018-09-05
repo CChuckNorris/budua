@@ -69,6 +69,7 @@ class MainController extends MyController
 
     public function actionRaiting()
     {
+        $this->layout = "common";
         /** @var CompanyDataMapper $companyDataMapper */
         $companyDataMapper = new CompanyDataMapper(new Company());
         $companies = $companyDataMapper->getAll();

@@ -10,13 +10,13 @@ use common\helpers\WidgetsNamesHolder;
         <?= \frontend\components\SidebarBannerWidget::widget(['options' => $widgetSettingsProvider->getSideBarBannerWidgetSettings()]);?>
 
 
-    </div>
+    <!--</div>
     <div class="item">
         <div class="sidebar-title">Популярные направления</div>
-        <?= \frontend\components\PopularActivityDirectionsWidget::widget(["template" => "vertical"]) ?>
+        <?/*= \frontend\components\PopularActivityDirectionsWidget::widget(["template" => "vertical"]) */?>
     </div>
     <div class="item">
         <div class="sidebar-title">Регионы</div>
-        <?= \frontend\components\RegionsListWidget::widget(); ?>
-    </div>
+        <?/*= \frontend\components\RegionsListWidget::widget(); */?>
+    </div>-->
 </div>

@@ -1,29 +1,4 @@
 
-.main-banner {
-    position: relative;
-    background: url("../img/top-banner.jpg") no-repeat 50% 50%;
-    background-size: cover;
-    padding-top: 177px;
-    padding-bottom: 177px;
-
-}
-
-.main-banner:after
-{
-    display: block;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    background:rgba(0,0,0,0.5);
-}
-
-.pattern
-{
-
-}
-
 .main-banner .heading {
     font-family: "Roboto Slab", serif;
     font-size: 45px;

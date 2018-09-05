@@ -10,7 +10,10 @@
     margin: 0;
     outline: none !important;
 }
-
+ul
+{
+    list-style: none;
+}
 html,
 body {
     width: 100%;
@@ -286,36 +289,6 @@ a:hover, a:focus {
     .about-person-carousel .item .image-cover {
         padding-top: 100%;
     }
-}
-
-.bg-stars {
-    background: #faf7f7 url("../img/bg-stars.png") no-repeat;
-    background-size: cover;
-    background-position-x: 25%;
-}
-
-.bg-stars-2 {
-    background: #faf7f7 url("../img/bg-stars-2.png") no-repeat;
-    background-size: cover;
-    background-position-x: 50%;
-}
-
-.bg-stars-3 {
-    background: #fff url("../img/bg-stars-3.png") no-repeat;
-    background-size: contain;
-    background-position-x: 25%;
-}
-
-.bg-stars-sidebar {
-    background: url("../img/bg-stars-sidebar.png") no-repeat;
-    background-size: contain;
-    background-position-y: bottom;
-    padding-bottom: 150px;
-}
-
-.bg-small-stars {
-    background: #fff url("../img/bg-small-stars.png") no-repeat 50% 10%;
-    background-position-x: 50%;
 }
 
 @media (max-width: 1200px) {
@@ -1924,7 +1897,7 @@ a:hover, a:focus {
 
 .icon-right-arrow:before {
     content: "\e90d";
-    color: #ff2250;
+    color: #00d5a6;
 }
 
 .icon-star-3:before {
@@ -2607,9 +2580,11 @@ img.mfp-img {
     box-shadow: 0px 6px 7.36px 0.64px rgba(0, 0, 0, 0.02);
     margin-bottom: 15px;
 }
-
-.main-header.none-margin {
+.none-margin {
     margin-bottom: 0;
+}
+.none-padding {
+    padding: 0;
 }
 
 .main-menu {
@@ -2686,7 +2661,7 @@ img.mfp-img {
 
 .mobile-menu .main-menu > li a {
     font-size: 24px;
-    z-index: 1;
+    z-index: 10;
 }
 
 .mobile-menu .main-menu > li a:after {
@@ -3439,10 +3414,6 @@ img.mfp-img {
     display: block;
 }
 
-.sidebar {
-    padding-left: 30px;
-}
-
 .sidebar .item {
     margin-bottom: 120px;
 }
@@ -3461,14 +3432,10 @@ img.mfp-img {
 
 @media (max-width: 992px) {
     .sidebar {
-        margin-top: 100px;
+        margin-top: 0;
         padding-left: 0;
+        text-align: center;
     }
-
-    .sidebar .item .banner.image-cover {
-        padding-top: 50%;
-    }
-
     .sidebar .item .sidebar-title {
         text-align: center;
         font-size: 30px;
@@ -3489,11 +3456,6 @@ img.mfp-img {
     }
 }
 
-@media (max-width: 480px) {
-    .sidebar .item .banner.image-cover {
-        padding-top: 100%;
-    }
-}
 
 .social-list {
     list-style: none;
@@ -3566,6 +3528,7 @@ img.mfp-img {
 .table-responsive {
     width: 100%;
     overflow-x: auto;
+    border: none;
 }
 
 .table {
@@ -3589,9 +3552,6 @@ img.mfp-img {
     text-align: left;
 }
 
-.table tbody tr {
-    border-bottom: 1px solid #e8e8e8;
-}
 
 .table tbody .stage-full td:last-child {
     position: relative;
@@ -3642,16 +3602,6 @@ img.mfp-img {
     position: relative;
 }
 
-.table tbody .stage-little td:last-child:after {
-    content: '';
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: #ddfeed;
-    height: 100%;
-    width: 10px;
-    display: block;
-}
 
 .table tbody td {
     padding: 20px 0;
@@ -3670,7 +3620,6 @@ img.mfp-img {
 .table tbody td.company {
     font-weight: 500;
     color: #0c0c24;
-    text-align: left;
 }
 
 .table tbody td .md-visible {
@@ -3751,13 +3700,13 @@ img.mfp-img {
 
     .table tbody td .md-visible {
         display: block;
+        text-align: center;
     }
 
     .table tbody td .md-visible .company-title {
         display: inline-block;
         border-bottom: 1px dashed #0c0c24;
         cursor: pointer;
-        margin-bottom: 20px;
     }
 
     .table tbody td .md-visible .company-title.active {
@@ -3776,7 +3725,6 @@ img.mfp-img {
         display: inline-block;
         font-size: 18px;
         vertical-align: top;
-        margin-right: 15px;
     }
 
     .table tbody td .md-visible .content .cell .value {
@@ -3796,13 +3744,13 @@ img.mfp-img {
         width: 100%;
         height: 40px;
         line-height: 38px;
-        border: 1px solid #ff2250;
+        border: 1px solid #00d5a6;
         text-align: center;
         font-family: "ProximaNova", sans-serif;
         font-weight: 400;
         font-size: 16px;
-        color: #ff2250;
-        margin: 30px 0;
+        color: #00d5a6;
+        margin: 10px 0;
     }
 
     .table tbody td .md-visible .content .more-link .icon {
