@@ -1,9 +1,15 @@
-<li class="stage-little risk-badge">
+<?php
+$badgeClass = $widget->getBadgeLabel($model);
+?>
+
+<li class="stage-little <?= $badgeClass; ?>">
     <table>
         <tr>
             <td class="numb"><?= $key + 1; ?></td>
             <td class="logo">
+              <a href="<?= $widget->getCompanyLink($model['alias'])?>" target="_blank" data-pjax="false">
                 <?= \yii\helpers\Html::img($widget->getLogoPath($model)) ?>
+              </a>
             </td>
             <td class="company">
                 <div class="md-hidden">

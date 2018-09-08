@@ -28,6 +28,8 @@
  {
     overflow: hidden;
     width: 100%;
+    text-align: right;
+    padding-top: 60px;
  }
 
 .horizontal-banner
@@ -836,6 +838,73 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     height: 45px;
 }
 
+.pagination li.active a
+{
+    width: 35px!important;
+    height: 35px!important;
+    line-height: 22px!important;
+    border-radius: 50%!important;
+    background-color: #00d5a6!important;
+    border-color: #00d5a6!important;
+    color: #fff!important;
+}
+.pagination li a
+{
+    color: #414844!important;
+}
+
+.pagination li a:last-child
+{
+    margin-right: 0;
+}
+.pagination li
+{
+    margin-right: 10px!important;
+    display: inline-block!important;
+}
+.pagination li a,
+.pagination li > span
+{
+    font-size: 18px!important;
+}
+
+.pagination > .active > a,
+.pagination > .active > span,
+.pagination > .active > a:hover,
+.pagination > .active > span:hover,
+.pagination > .active > a:focus,
+.pagination > .active > span:focus
+{
+    background-color: transparent!important;
+    border-color: #00d5a6!important;
+}
+
+.pagination > .active > a:hover
+{
+    cursor: pointer!important;
+    color: #414844!important;
+}
+
+.pagination > li > a:hover,
+.pagination > li > span:hover,
+.pagination > li > a:focus,
+.pagination > li > span:focus
+{
+    color: #00d5a6!important;
+    background-color: transparent!important;
+    border-color: transparent!important;
+}
+
+.pagination > .disabled > span, .pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus, .pagination > .disabled > a,
+.pagination > .disabled > a:hover, .pagination > .disabled > a:focus,
+.pagination > li > a, .pagination > li > span
+{
+    background-color: transparent!important;
+    border-color: transparent!important;
+}
+
+
 @media (max-width: 991px)
 {
     ul.companies-rating-list-wiget > li
@@ -865,6 +934,11 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     .table-responsive .table-header .columns div
     {
         font-size: 14px;
+    }
+    .banner
+    {
+        text-align: center;
+        padding-top: 20px;
     }
 }
 

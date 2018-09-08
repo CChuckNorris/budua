@@ -31,6 +31,9 @@ use yii\helpers\Url;
  * @property string $tel
  * @property string $multiplier
  * @property integer $profile_complete_status
+ * @property integer $is_risk
+ * @property integer $is_checked
+ * @property integer $is_vip
  */
 class Company extends \yii\db\ActiveRecord implements IBasicEntity
 {
@@ -84,7 +87,7 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     {
         return [
             [['name', 'alias'], 'required'],
-            [['mod_rating', 'raiting', 'reviews', 'site_link', 'profile_complete_status'], 'integer'],
+            [['mod_rating', 'raiting', 'reviews', 'site_link', 'profile_complete_status', 'is_risk', 'is_checked', 'is_vip'], 'integer'],
             [['about', 'seo_title', 'seo_keys', 'seo_desc', 'videos', 'clients'], 'string'],
             [['tags', 'regions'], 'safe'],
             [['name', 'alias', 'site', 'vk_group', 'fb_group', 'tel', 'year'], 'string', 'max' => 255],
@@ -128,6 +131,9 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             'reviews_and_thanks' => 'Отзывы и благодарности клиентов',
             'profile_complete_status' => 'Наполненности профиля(%)',
             'multiplier' => 'Мультипликатор',
+            'is_risk' => 'Рискованный',
+            'is_checked' => 'Проверенный',
+            'is_vip' => 'VIP',
         ];
     }
 
