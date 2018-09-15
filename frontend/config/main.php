@@ -54,17 +54,7 @@ return [
                 'person/getraiting'=>'person/getraiting',
                 'person/logout/<alias>'=>'person/logout',
                 'person/<alias>'=>'person/person',
-                
-                'services'=>'service/services',
-                'service/getraiting'=>'service/getraiting',
-                'service/logout/<alias>'=>'service/logout',
-                'service/<alias>'=>'service/service',
-                
-                'conferences'=>'conference/conferences',
-                'conference/getraiting'=>'conference/getraiting',
-                'conference/logout/<alias>'=>'conference/logout',
-                'conference/<alias>'=>'conference/conference',
-                
+
                 'about'=>'main/about',
                 'contact'=>'main/contact',
 

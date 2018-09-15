@@ -8,8 +8,6 @@ use common\models\Review;
 use yii\helpers\Html;
 use common\models\Company;
 use common\models\Person;
-use common\models\Conference;
-use common\models\Service;
 
 class ReviewForm extends Model
 {
@@ -134,23 +132,5 @@ class ReviewForm extends Model
         $comp->raiting=$comp->raiting+$count;
         return $comp->save();
     }
-    public function saveConferenceReview($id, $gist)
-    {
-        $review = new Review();
-        $review->text=Html::encode($this->text);
-        $review->stars=Html::encode($this->star);
-        $count=$this->getCount($review->stars);
-        $review->user_id=Yii::$app->user->identity->id;
-        $review[$gist]=$id;
-        $review->date=date('U');
-        $review->likes=0;
-        if(Yii::$app->user->identity->user_id && Yii::$app->user->identity->user_id{0}!="f")
-            $review->ball=$this->getBall();
-        $review->save();
-        if($gist=='conference_id')
-            $comp=Conference::findOne(['id'=>$id]);
-        $comp->reviews=$comp->reviews+1;
-        $comp->raiting=$comp->raiting+$count;
-        return $comp->save();
-    }
+
 }

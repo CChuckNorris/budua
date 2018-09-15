@@ -34,10 +34,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'person_id',
                 'value'=> ArrayHelper::getValue($model, 'person.name')
             ],
-            [
-                'attribute'=>'conference_id',
-                'value'=> ArrayHelper::getValue($model, 'conference.name')
-            ],
             'stars',
             //'date',
             [

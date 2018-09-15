@@ -65,17 +65,13 @@ class Review extends \yii\db\ActiveRecord
             $this->gisturl=Url::toRoute(['person/person', 'alias'=>$this->person->alias]);
             $this->gistname=$this->person->name;
         }
-        elseif($this->conference_id){
-            $this->gisturl=Url::toRoute(["conference/conference", 'alias'=>$this->conference->alias]);
-            $this->gistname=$this->conference->name;
-        }
     }
     public function rules()
     {
         return [
             [['text', 'user_id', 'stars', 'date', 'likes'], 'required'],
             [['text','user_ids_like','user_ids_dislike'], 'string'],
-            [['user_id', 'company_id', 'stars', 'raiting', 'likes', 'ball', 'person_id', 'conference_id'], 'integer'],
+            [['user_id', 'company_id', 'stars', 'raiting', 'likes', 'ball', 'person_id'], 'integer'],
             [['date'], 'string', 'max' => 255],
         ];
     }
@@ -96,8 +92,7 @@ class Review extends \yii\db\ActiveRecord
             'likes' => 'Лайков',
             'user_ids_like' => 'User Ids Like',
             'user_ids_like' => 'User Ids DisLike',
-            'person_id'=>'Персона', 
-            'conference_id'=>'Конференция'
+            'person_id'=>'Персона',
         ];
     }
     public function getUser()
@@ -113,10 +108,6 @@ class Review extends \yii\db\ActiveRecord
         return $this->hasOne(Person::className(), ['id'=>'person_id']);
     }
 
-    public function getConference()
-    {
-        return $this->hasOne(Conference::className(), ['id'=>'conference_id']);
-    }
     public static function getAllComments($id, $gist, $sort, $sort_desc)
     {
         if(!$sort)

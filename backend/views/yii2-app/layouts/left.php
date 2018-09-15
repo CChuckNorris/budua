@@ -20,9 +20,7 @@
                 'items' => [
                     ['label' => 'Управление', 'options' => ['class' => 'header']],
                     ['label' => 'Компании', 'icon' => 'fa fa-list-alt', 'url' => ['/company']],
-                    ['label' => 'Сервисы', 'icon' => 'fa fa-cogs', 'url' => ['/service']],
                     ['label' => 'Персоны', 'icon' => 'fa fa-users', 'url' => ['/person']],
-                    ['label' => 'Конференции', 'icon' => 'fa fa-comments-o', 'url' => ['/conference']],
                     ['label' => 'Регионы', 'icon' => 'fa fa-list-alt', 'url' => ['/region']],
                     ['label' => 'Теги', 'icon' => 'fa fa-tags', 'url' => ['/tag']],
                     ['label' => 'Направление деятельности', 'icon' => 'fa fa-tags', 'url' => ['/activity-directions']],
@@ -31,7 +29,6 @@
                     ['label' => 'Отзывы', 'icon' => 'fa fa-tags', 'url' => ['/review']],
                     ['label' => 'Страницы', 'icon' => 'fa fa-tags', 'url' => ['/pages']],
                     ['label' => 'Таблицы на главной', 'icon' => 'fa fa-tags', 'url' => ['/mainpage/view']],
-                    ['label' => 'Баннеры', 'icon' => 'fa fa-tags', 'url' => ['/banner']],
                     ['label' => 'Заявки', 'icon' => 'fa fa-tags', 'url' => ['/request-service']],
                 ],
             ]

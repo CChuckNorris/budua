@@ -87,10 +87,6 @@ class Theme extends \yii\db\ActiveRecord
             'person_tilte'=>'Персоны СЕО Заголовок',
             'person_keys'=>'Персоны СЕО Ключевые слова',
             'person_desc'=>'Персоны СЕО Описание',
-            'conference_h1'=>'Конференции Заголово Н1',
-            'conference_title'=>'Конференции СЕО Заголовок',
-            'conference_keys'=>'Конференции СЕО Ключевые слова',
-            'conference_desc'=>'Конференции СЕО Описание',
         ];
     }
 }

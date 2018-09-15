@@ -24,7 +24,6 @@ use yii\helpers\Url;
  * @property string $seo_keys
  * @property string $seo_desc
  *
- * @property Conference[] $conferences
  * @property Company $company
  * @property Review[] $reviews0
  */
@@ -63,22 +62,8 @@ class Person extends \yii\db\ActiveRecord implements IPersonEntity
             ['logo','file','skipOnEmpty' => true, 'extensions' => 'png, jpg, gif', 'checkExtensionByMimeType'=>false]
         ];
     }
-    public $conferences_string="";
 
-    public function afterFind()
-    {
-        if(isset($this->conferences))
-        {
-            $i=0;
-            foreach($this->conferences as $conference)
-            {
-                if($i!=0)
-                    $this->conferences_string.=', ';
-                $this->conferences_string.=' <a data-pjax="0" href="'.Url::toRoute(['conference/conference', 'alias'=>$conference->alias]).'">'.$conference->name.'</a> ';
-                $i=1;
-            }
-        }
-    }
+
     /**
      * @inheritdoc
      */
@@ -133,13 +118,6 @@ class Person extends \yii\db\ActiveRecord implements IPersonEntity
         return $this->about;
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getConferences()
-    {
-        return $this->hasMany(Conference::className(), ['person_id' => 'id']);
-    }
 
     /**
      * @return \yii\db\ActiveQuery

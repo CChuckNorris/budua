@@ -10,8 +10,6 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use common\models\Company;
 use common\models\Person;
-use common\models\Conference;
-use common\models\Service;
 use common\models\User;
 use yii\filters\AccessControl;
 
@@ -128,9 +126,7 @@ class ReviewController extends Controller
             $sec=Company::findOne(['id'=>$model->company_id]);
         elseif($model->person_id)
             $sec=Person::findOne(['id'=>$model->person_id]);        
-        elseif($model->conference_id)
-            $sec=Conference::findOne(['id'=>$model->conference_id]);
-            
+
         $sec->raiting=$sec->raiting-$arr[$model->stars];
         $sec->reviews=$sec->reviews-1;
         $sec->save();   

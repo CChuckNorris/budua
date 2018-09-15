@@ -1,11 +1,8 @@
 <?php
 
-use yii\helpers\Html;
 use yii\grid\GridView;
 use common\models\User;
 use common\models\Company;
-use common\models\Conference;
-use common\models\Service;
 use common\models\Person;
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\ReviewSearch */
@@ -44,11 +41,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute'=>'person_id',
                 'filter'=>Person::find()->select(['name','id'])->indexBy('id')->column(),
                 'value'=>'person.name'
-            ],
-                        [
-                'attribute'=>'conference_id',
-                'filter'=>Conference::find()->select(['name','id'])->indexBy('id')->column(),
-                'value'=>'conference.name'
             ],
             'stars',
             'text:ntext',
