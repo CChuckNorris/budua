@@ -18,19 +18,38 @@
     top: 0;
 
 }
+.image-carousel .item .image-cover,
+.image-carousel.owl-carousel .owl-item img,
+.video-carousel .image-cover,
+.about-person-carousel.owl-carousel .owl-item img,
+.about-person-carousel .item:before
+{
+    border-radius: 15px;
+}
+.container.wall
+{
+    width: 100%;
+}
 
 #review-block
 {
     float: none;
 }
+#review-block .form-group
+{
+    margin-bottom: 0;
+}
 
-.banner
- {
+.banner {
     overflow: hidden;
     width: 100%;
     text-align: right;
     padding-top: 60px;
- }
+}
+
+.profile-template .banner {
+    padding-top: 0;
+}
 
 .horizontal-banner
 {
@@ -71,7 +90,18 @@ ul.sort li {
 .company-info .company-info-list .info {
 
     white-space: normal;
+    padding-left: 53px;
+}
 
+.company-info .company-info-list .info .value p
+{
+    text-transform: capitalize;
+    margin: 0 0 5px;
+}
+
+.company-info .company-info-list .row
+{
+    border-bottom: 1px solid #dae6f1;
 }
 
 .white-popup-block {
@@ -118,10 +148,6 @@ ul.sort li {
     padding-top: 0;
 }
 
-.main-footer .footer-menu a
-{
-    line-height: 1.71;
-}
 
 .main-footer .footer-menu a,
 .main-footer .footer-menu a:visited,
@@ -147,14 +173,8 @@ ul.sort li {
     margin-top: 10px;
 }
 
-.socials
-{
-    margin-top: 20px;
-}
-
 .socials .social-title
 {
-    margin-top: -15px;
     padding: 0;
 }
 .socials  .social-list
@@ -197,10 +217,9 @@ ul.sort li {
 .dropdown-wrapper {
 
     width: 100%;
-
     position: relative;
-
     text-align: right;
+    padding: 20px 0;
 
 }
 
@@ -592,7 +611,7 @@ ul.sort li {
     color: #00b795;
     padding: 10px 0;
     text-align: center;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 500;
     font-size: 15px;
 }
@@ -786,6 +805,7 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     position: relative;
     width: 33%;
     text-align: center;
+    font-family: "OpenSans Regular", sans-serif;
 }
 .table-responsive .table-header
 {
@@ -861,6 +881,7 @@ ul.companies-rating-list-wiget > li.risk-badge:after
 {
     margin-right: 10px!important;
     display: inline-block!important;
+    font-family: "OpenSans",sans-serif;
 }
 .pagination li a,
 .pagination li > span
@@ -903,10 +924,101 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     background-color: transparent!important;
     border-color: transparent!important;
 }
+.company-info .company-info-list .socials.item
+{
+    padding-left: 55px;
+    margin-top: 7px;
+}
 
+.company-info .company-info-list .item
+{
+    padding: 10px 10px 10px 0px;
+}
+
+.extra-data
+{
+    font-family: "OpenSans Regular",sans-serif;
+}
+@media (max-width: 1024px) {
+    .main-header .col-md-offset-1
+    {
+        margin: 0!important;
+    }
+    .logo-header img
+    {
+        width: 130px;
+    }
+    .main-menu > li a
+    {
+        font-size: 15px;
+        padding: 0 15px;
+    }
+   
+}
 
 @media (max-width: 991px)
 {
+
+    .reviews-news .tab-content,
+    .reviews-news .name
+    {
+        padding: 0;
+        margin-top: 0;
+    }
+    .reviews-news .testimonials-list-vertical .testimonial-card .info .name
+    {
+        display: table;
+        width: inherit;
+    }
+    .reviews-news .testimonials-list-vertical .testimonial-card .date
+    {
+        text-align: left;
+        padding-left: 37px;
+    }
+    .write-review .social-list
+    {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .profile-template .reviews-news  .nav > li a
+    {
+        padding: 10px 10px!important;
+        font-size: 12px!important;
+    }
+
+    .review-section .dropdown-wrapper
+    {
+        text-align: center;
+    }
+    .sidebar .item
+    {
+        margin-top: 50px;
+    }
+    .reviews-news .text
+    {
+        padding: 0 20px;
+        font-size: 14px;
+        line-height: 1.6em;
+    }
+    .reviews-news .testimonials-list-vertical .testimonial-card
+    {
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+
+    .reviews-news .rating
+    {
+        display: none;
+    }
+    .reviews-news .star-rating
+    {
+        display: none;
+    }
+    .reviews-news .round-photo
+    {
+        padding: 0;
+    }
+
     ul.companies-rating-list-wiget > li
     {
         height: auto;
@@ -940,5 +1052,220 @@ ul.companies-rating-list-wiget > li.risk-badge:after
         text-align: center;
         padding-top: 20px;
     }
+    .company-info [class*="col-md-"],
+    .extra-data [class*="col-md-"]
+    {
+        -webkit-flex-basis: auto;
+    }
+
+    .extra-data .title
+    {
+        text-align: center!important;
+        padding-bottom: 20px;
+    }
+
+    .profile-template .about
+    {
+        margin-top: 0!important;
+    }
+
+    .extra-data .row,
+    .extra-data .row:first-child
+    {
+        margin-bottom: 20px;
+        margin-top: 0!important;
+    }
+
+    .company-info .company-info-list .info-header
+    {
+        position: relative;
+        margin: 0 auto;
+        display: block;
+    }
+    .company-info .company-info-list .info-header .title
+    {
+        margin-left: 0;
+    }
+
+    .company-info .company-info-list .info
+    {
+        display: block;
+        padding-left: 0;
+    }
+    .company-info .company-info-list .socials.item
+    {
+        padding-left: 0;
+        margin-top: 0;
+        text-align: center;
+    }
+    .company-info .company-info-list .socials .social-title
+    {
+        display: block;
+        margin-right: 0;
+        margin-top: 0;
+    }
+    .company-info .company-info-list .socials
+    {
+        width: 100%;
+        display: block;
+        float: none;
+
+    }
+
+    .company-info .company-info-list .info-header .icon
+    {
+        position: absolute;
+        left: -80px;
+    }
+
+    .company-info .company-info-list .item
+    {
+        display: inline-block;
+        width: 100%;
+        padding-left: 100px;
+        text-align: left;
+        border-bottom: 1px solid #dae6f1;
+    }
+
+    .company-info .company-info-list .info .value
+    {
+        text-align: left;
+    }
+
+    .company-info .company-info-list .row {
+        border-bottom: none;
+    }
+
+    .profile-template .promotion
+    {
+        padding-bottom: 50px!important;
+    }
+}
+.image-carousel.owl-carousel .owl-item img,
+.video-carousel img
+{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 100%;
+    width: auto;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
+.video-carousel .image-cover
+{
+    padding-top: 93%;
+}
+
+.owl-nav .owl-prev span,
+.owl-nav .owl-next span
+{
+    display: none;
+}
+
+
+.extra-data .row:first-child
+{
+    margin-top: 60px;
+}
+.extra-data .row {
+    margin-bottom: 60px;
+}
+.extra-data .value {
+    padding: 20px 21px 20px 21px;
+    margin-left: 7px;
+    border-radius: 10px;
+    background-color: #fbfbfc;
+}
+.extra-data .title
+{
+    padding-right: 28px;
+    padding-top: 20px;
+    color: #00d5a6;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: right;
+}
+.company-info .social-list > li a .icon:before
+{
+    color: #01daef;
+}
+
+.profile-template .about
+{
+    margin-top: 50px;
+    margin-bottom: 60px;
+    font-family: "OpenSans Regular",sans-serif;
+}
+
+.profile-template .promotion
+{
+    padding-bottom: 180px;
+    background: url(../img/bg-city.jpg) no-repeat bottom;
+    background-size: cover;
+}
+
+.profile-template .reviews-news
+{
+    margin-top: 60px;
+}
+.profile-template .reviews-news li.active a,
+.profile-template .reviews-news li.active a:focus
+{
+    background-color: #00d5a6!important;
+    color: #fff!important;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+.profile-template .reviews-news  .tabs-above > .nav-tabs > li > a:hover
+{
+    border-color: transparent!important;
+}
+
+.profile-template .reviews-news  .nav > li > a:hover,
+.profile-template .reviews-news .nav > li > a:focus {
+    background-color: transparent;
+}
+
+.profile-template .reviews-news  .nav > li a
+{
+    padding: 10px 35px;
+    text-decoration: underline;
+    text-transform: uppercase;
+    color: #29322d;
+    font-family: "OpenSans Regular", sans-serif;
+}
+.profile-template .reviews-news  .nav > li.active a:after
+ {
+    content: '';
+    position: absolute;
+    left: 42%;
+    top: 100%;
+    width: 0;
+    height: 0;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-top: 7px solid #00d5a6;
+    clear: both;
+ }
+
+.tabs-above > .nav-tabs > .active > a, .tabs-above > .nav-tabs > li.active > a:hover, .tabs-above > .nav-tabs > li.active > a:focus
+{
+    border: none;
+}
+
+.profile-template .reviews-news  .nav-tabs
+{
+    border: none;
+}
+
+.reviews-news .round-photo img
+{
+    border: none;
+}
+
+.reviews-news .testimonial-card
+{
+    border-radius: 10px;
+}

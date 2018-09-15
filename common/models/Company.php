@@ -16,6 +16,7 @@ use yii\helpers\Url;
  * @property string $name
  * @property string $alias
  * @property string $site
+ * @property string $address
  * @property integer $raiting
  * @property integer $mod_rating
  * @property integer $reviews
@@ -27,13 +28,15 @@ use yii\helpers\Url;
  * @property string $tags
  * @property string $logo
  * @property string $about
+ * @property string $founders
+ * @property string $court_cases
+ * @property string $authorized_persons
+ * @property string $state_register_legal_entities
  * @property string $e-mail
  * @property string $tel
  * @property string $multiplier
  * @property integer $profile_complete_status
- * @property integer $is_risk
- * @property integer $is_checked
- * @property integer $is_vip
+ * @property string $rating_status
  */
 class Company extends \yii\db\ActiveRecord implements IBasicEntity
 {
@@ -87,8 +90,9 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     {
         return [
             [['name', 'alias'], 'required'],
-            [['mod_rating', 'raiting', 'reviews', 'site_link', 'profile_complete_status', 'is_risk', 'is_checked', 'is_vip'], 'integer'],
-            [['about', 'seo_title', 'seo_keys', 'seo_desc', 'videos', 'clients'], 'string'],
+            [['mod_rating', 'raiting', 'reviews', 'site_link', 'profile_complete_status'], 'integer'],
+            [['about', 'seo_title', 'seo_keys', 'seo_desc',
+                'videos', 'clients', 'rating_status', 'founders', 'court_cases', 'authorized_persons', 'state_register_legal_entities', 'address'], 'string'],
             [['tags', 'regions'], 'safe'],
             [['name', 'alias', 'site', 'vk_group', 'fb_group', 'tel', 'year'], 'string', 'max' => 255],
             ['email', 'email'],
@@ -131,9 +135,12 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             'reviews_and_thanks' => 'Отзывы и благодарности клиентов',
             'profile_complete_status' => 'Наполненности профиля(%)',
             'multiplier' => 'Мультипликатор',
-            'is_risk' => 'Рискованный',
-            'is_checked' => 'Проверенный',
-            'is_vip' => 'VIP',
+            'rating_status' => 'Репутация',
+            'founders' => 'Учредители',
+            'court_cases' => 'Судебные дела',
+            'authorized_persons' => 'Уполномоченные лица (укажите через запятую)',
+            'state_register_legal_entities' => 'ЕГРПОУ',
+            'address' => 'Адрес'
         ];
     }
 
@@ -161,6 +168,11 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     public function getAbout()
     {
         return $this->about;
+    }
+
+    public function getAuthorizedPersons()
+    {
+        return array_filter(explode(",", $this->authorized_persons), 'trim');
     }
 
     public function getYoutubeVideoIds()

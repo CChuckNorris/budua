@@ -18,7 +18,7 @@ class PersonSearch extends Person
     public function rules()
     {
         return [
-            [['id', 'company_id', 'service_id', 'raiting', 'reviews'], 'integer'],
+            [['id', 'company_id', 'raiting', 'reviews'], 'integer'],
             [['name', 'alias', 'vk_group', 'fb_group', 'tags', 'logo', 'about', 'seo_title', 'seo_keys', 'seo_desc'], 'safe'],
         ];
     }
@@ -61,7 +61,6 @@ class PersonSearch extends Person
         $query->andFilterWhere([
             'id' => $this->id,
             'company_id' => $this->company_id,
-            'service_id' => $this->service_id,
             'raiting' => $this->raiting,
             'reviews' => $this->reviews,
         ]);

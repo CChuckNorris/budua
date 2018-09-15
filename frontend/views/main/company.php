@@ -18,38 +18,30 @@ $this->registerMetaTag([
 
 <?= $this->render("company-partials/_info", ["company" => $company]) ?>
 
-<?php if (!empty($company["activities"])): ?>
-    <div class="section-subtitle small top-offset-larger bottom-offset align-left md-align-center">Специализация</div>
-    <?= \frontend\components\CompanyActivityDirectionsWidget::widget(["items" => $company["activities"]]) ?>
-<?php endif; ?>
-
-<?php if (!empty($company["clients"])): ?>
-    <div class="section-subtitle small top-offset bottom-offset align-left md-align-center">Среди клиентов компании
-    </div>
-    <?= \frontend\components\CompanyClientsWidget::widget(["items" => $company["clients"]]) ?>
-<?php endif; ?>
+<?= $this->render("company-partials/_about", ["company" => $company]) ?>
 
 <?php if (!empty($company["casesFiles"])): ?>
-    <div class="section-subtitle small top-offset bottom-offset align-left md-align-center">Кейсы</div>
     <?= \frontend\components\CompanyImageCarouselWidget::widget(["items" => $company["casesFiles"]]) ?>
 <?php endif; ?>
 
-<?php if (!empty($company["reviewsAndThanksFiles"])): ?>
-    <div class="section-subtitle small top-offset bottom-offset align-left md-align-center">Отзывы и благодарности
-        клиентов
+
+<?= $this->render('company-partials/_extra_data', ['company' => $company])?>
+
+<?php if (!empty($company["activities"])): ?>
+<div class="row">
+    <div class="col-md-12 promotion">
+        <?= \frontend\components\CompanyActivityDirectionsWidget::widget(["items" => $company["activities"]]) ?>
     </div>
-    <?= \frontend\components\CompanyImageCarouselWidget::widget(["items" => $company["reviewsAndThanksFiles"]]) ?>
+</div>
+
 <?php endif; ?>
-
-<?= $this->render("company-partials/_about", ["company" => $company]) ?>
-
 
 <?php
 
 
 $items = [
     [
-        'label' => '<i class="glyphicon glyphicon-home"></i> Комментарии',
+        'label' => 'Отзывы о компании '.$company['name'],
         'content' => $this->render("company-partials/_reviews", [
             "model" => $model,
             "company" => $company,
@@ -74,16 +66,20 @@ $items = [
         'active' => false
     ]
 ];
-
-echo TabsX::widget([
-    'items' => $items,
-    'position' => TabsX::POS_ABOVE,
-    'encodeLabels' => false,
-    'enableStickyTabs' => true
-]);
-
 ?>
+    <div class="row">
+        <div class="col-md-12 reviews-news">
+            <?php
+            echo TabsX::widget([
+                'items' => $items,
+                'position' => TabsX::POS_ABOVE,
+                'encodeLabels' => false,
+                'enableStickyTabs' => true
+            ]);
 
+            ?>
+        </div>
+    </div>
 
 <?= $this->render("/layouts/_h-banner-template"); ?>
 

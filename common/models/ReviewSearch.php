@@ -18,7 +18,7 @@ class ReviewSearch extends Review
     public function rules()
     {
         return [
-            [['id', 'user_id', 'company_id', 'person_id', 'service_id', 'conference_id', 'stars', 'raiting', 'likes'], 'integer'],
+            [['id', 'user_id', 'company_id', 'person_id', 'conference_id', 'stars', 'raiting', 'likes'], 'integer'],
             [['text', 'date', 'user_ids_like', 'user_ids_dislike'], 'safe'],
         ];
     }
@@ -63,7 +63,6 @@ class ReviewSearch extends Review
             'user_id' => $this->user_id,
             'company_id' => $this->company_id,
             'person_id' => $this->person_id,
-            'service_id' => $this->service_id,
             'conference_id' => $this->conference_id,
             'stars' => $this->stars,
             'raiting' => $this->raiting,

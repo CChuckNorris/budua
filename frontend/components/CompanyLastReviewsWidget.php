@@ -33,7 +33,7 @@ class CompanyLastReviewsWidget extends UserReviewsWidget
     public function getCompanyUrl($url)
     {
         if (isset($url) && !empty($url))
-            return \yii\helpers\Url::to($url);
+            return \yii\helpers\Url::to($url."#w1-container");
         return "#";
     }
 

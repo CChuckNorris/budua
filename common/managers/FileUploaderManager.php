@@ -4,7 +4,9 @@ namespace common\managers;
 
 use common\interfaces\IFileUploader;
 use Intervention\Image\ImageManagerStatic as Image;
+use yii\base\Security;
 use yii\helpers\BaseFileHelper;
+use yii\helpers\StringHelper;
 use yii\web\UploadedFile;
 
 /**
@@ -173,6 +175,7 @@ class FileUploaderManager implements IFileUploader
      */
     private function getFileName($prefix = '', $suffix = '', $extension)
     {
+        $suffix.= (new Security())->generateRandomString(10);
         return $prefix . $this->file_name_pattern . $suffix . "." . $extension;
     }
 

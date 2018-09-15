@@ -46,7 +46,7 @@ class UserReviewsWidget extends Widget
      */
     public function getDateByFormat($date)
     {
-        return date("d-m-Y",$date);
+        return date("d.m.Y",$date);
     }
 
     /**
@@ -81,7 +81,7 @@ class UserReviewsWidget extends Widget
 
     public function getAnonAvatar()
     {
-        return Url::to("/frontend/web/img/anon.jpg");
+        return Url::to("/frontend/web/img/anon.png");
     }
 
     public function getColoredClass($stars)

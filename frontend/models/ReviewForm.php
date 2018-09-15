@@ -124,7 +124,6 @@ class ReviewForm extends Model
         $review->stars=Html::encode($this->star);
         $count=$this->getCount($review->stars);
         $review->user_id=Yii::$app->user->identity->id;
-        $review->service_id=$id;
         $review->date=date('U');
         $review->likes=0;
         if(Yii::$app->user->identity->user_id && Yii::$app->user->identity->user_id{0}!="f")

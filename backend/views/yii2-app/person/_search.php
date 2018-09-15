@@ -23,27 +23,6 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'company_id') ?>
 
-    <?= $form->field($model, 'service_id') ?>
-
-    <?php // echo $form->field($model, 'raiting') ?>
-
-    <?php // echo $form->field($model, 'reviews') ?>
-
-    <?php // echo $form->field($model, 'vk_group') ?>
-
-    <?php // echo $form->field($model, 'fb_group') ?>
-
-    <?php // echo $form->field($model, 'tags') ?>
-
-    <?php // echo $form->field($model, 'logo') ?>
-
-    <?php // echo $form->field($model, 'about') ?>
-
-    <?php // echo $form->field($model, 'seo_title') ?>
-
-    <?php // echo $form->field($model, 'seo_keys') ?>
-
-    <?php // echo $form->field($model, 'seo_desc') ?>
 
     <div class="form-group">
         <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>

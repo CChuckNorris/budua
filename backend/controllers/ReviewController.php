@@ -130,8 +130,6 @@ class ReviewController extends Controller
             $sec=Person::findOne(['id'=>$model->person_id]);        
         elseif($model->conference_id)
             $sec=Conference::findOne(['id'=>$model->conference_id]);
-        elseif($model->service_id)
-            $sec=Service::findOne(['id'=>$model->service_id]);       
             
         $sec->raiting=$sec->raiting-$arr[$model->stars];
         $sec->reviews=$sec->reviews-1;

@@ -4,7 +4,7 @@ use yii\helpers\Url;
 
 ?>
 
-<div class="col-xs-12 col-md-6 end-md">
+<div class="col-xs-12 col-md-12 end-md">
 
     <div class="dropdown-wrapper ">
         <img src="/frontend/web/img/review_loader.gif" class="review-loader">

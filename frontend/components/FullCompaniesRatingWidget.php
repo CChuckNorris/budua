@@ -55,7 +55,7 @@ class FullCompaniesRatingWidget extends CompaniesRatingWidget
 
     public function getBadgeLabel($item)
     {
-        return $this->RatingBadgeProvider->getBadgeClass($item['is_risk'], $item['is_checked'], $item['is_vip']);
+        return $this->RatingBadgeProvider->getBadgeClass($item['rating_status']);
     }
 
     public function checkValue($value)

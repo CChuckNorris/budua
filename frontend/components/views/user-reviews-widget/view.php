@@ -9,7 +9,7 @@ use yii\widgets\ListView;
 $dataProvider = new ArrayDataProvider([
     'allModels' => $items,
     'pagination' => [
-        'pageSize' => 2,
+        'pageSize' => $widget->pageSize,
     ],
 ]);
 ?>

@@ -19,7 +19,7 @@ body {
     width: 100%;
     height: 100%;
     font-size: 14px;
-    font-family: "ProximaNova", sans-serif;
+    font-family: "OpenSans Bold", sans-serif;
     font-weight: 400;
     color: #444;
     -webkit-font-smoothing: antialiased;
@@ -193,10 +193,6 @@ a:hover, a:focus {
     z-index: 2;
 }
 
-.about-person-carousel .item .image-cover {
-    padding-top: 93%;
-}
-
 .about-person-carousel .item:hover:before, .about-person-carousel .item:focus:before {
     background-color: rgba(0, 0, 0, 0.3);
 }
@@ -212,7 +208,7 @@ a:hover, a:focus {
 .about-person-carousel .owl-nav .owl-prev:before {
     content: "\e905";
     font-family: 'icomoon';
-    color: #0c0c24;
+    color: #dae6f1;
     font-size: 21px;
     transition: .2s;
 }
@@ -236,7 +232,7 @@ a:hover, a:focus {
 .about-person-carousel .owl-nav .owl-next:before {
     content: "\e905";
     font-family: 'icomoon';
-    color: #0c0c24;
+    color: #dae6f1;
     font-size: 21px;
     transition: .2s;
 }
@@ -272,17 +268,15 @@ a:hover, a:focus {
         left: 10px;
     }
 
-    .about-person-carousel .owl-nav .owl-prev:before {
-        font-size: 41px;
+    .about-person-carousel .owl-nav .owl-prev:before,
+    .about-person-carousel .owl-nav .owl-next:before {
+        font-size: 25px;
     }
 
     .about-person-carousel .owl-nav .owl-next {
         right: 10px;
     }
 
-    .about-person-carousel .owl-nav .owl-next:before {
-        font-size: 41px;
-    }
 }
 
 @media (max-width: 480px) {
@@ -358,27 +352,31 @@ a:hover, a:focus {
     text-align: left;
 }
 
-.company-info .company-info-list > li {
-    border-bottom: 1px solid #e8e8e8;
-    padding: 5px 0;
-    width: 50%;
-    display: inline-block;
-}
-
 .company-info .company-info-list .icon {
     font-size: 29px;
-    color: #3655e5;
+    color: #01daef;
     display: inline-block;
     vertical-align: middle;
+}
+.company-info .company-info-list,
+.company-info .company-info-list > div
+{
+    padding: 0;
 }
 
 .company-info .company-info-list .info {
     display: inline-block;
-    margin-left: 30px;
     vertical-align: middle;
 }
 
-.company-info .company-info-list .info .name {
+.company-info .company-info-list .info-header
+{
+    width: 100%;
+    font-family: "OpenSans Regular", sans-serif;
+}
+
+.company-info .company-info-list .info-header .title {
+    margin-left: 20px;
     font-size: 18px;
     color: #6a6a71;
     text-transform: uppercase;
@@ -389,10 +387,11 @@ a:hover, a:focus {
     font-size: 16px;
     color: #0c0c24;
     line-height: 1.5;
+    font-family: "OpenSans Regular", sans-serif;
 }
 
 .company-info .company-info-list.top-offset {
-    margin-top: 60px;
+    margin-top: 35px;
 }
 
 .company-info .social-title {
@@ -423,20 +422,13 @@ a:hover, a:focus {
 
     .company-info .company-info-list .info {
         width: 300px;
-        text-align: left;
-        margin-left: 50px;
     }
 
     .company-info .company-info-list .info .name {
         font-size: 24px;
     }
 
-    .company-info .company-info-list .info .value {
-        font-size: 18px;
-    }
-
     .company-info .social-title {
-        font-size: 24px;
         margin-right: 40px;
     }
 
@@ -477,10 +469,13 @@ a:hover, a:focus {
 .company-logo {
     border: 1px solid #e8e8e8;
     padding: 15px;
+    text-align: center;
+    border-radius: 10px;
 }
 
-.company-logo .image-contain {
-    padding-top: 18%;
+.company-logo img
+{
+    max-width: 140px;
 }
 
 @media (max-width: 992px) {
@@ -528,8 +523,30 @@ a:hover, a:focus {
     font-style: normal;
 }
 
+
+@font-face {
+    font-family: 'OpenSans Regular';
+    src: url("../fonts/opensans/OpenSans-Regular.ttf") format("truetype");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans Bold';
+    src: url("../fonts/opensans/OpenSans-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans SemiboldItalic';
+    src: url("../fonts/opensans/OpenSans-SemiboldItalic.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
 .form .form-group .title {
-    font-family: "Roboto Slab", serif;
+    font-family: "OpenSans Regular", serif;
     font-size: 18px;
     color: #0c0c24;
 }
@@ -561,7 +578,7 @@ a:hover, a:focus {
 }
 
 .section .section-title {
-    font-family: "Roboto Slab", serif;
+    font-family: "OpenSans Bold", serif;
     color: #0c0c24;
     font-size: 30px;
     font-weight: 700;
@@ -679,7 +696,7 @@ a:hover, a:focus {
     }
 
     .paragraph {
-        font-size: 18px;
+        font-size: 15px;
     }
 }
 
@@ -1936,7 +1953,6 @@ a:hover, a:focus {
 
 .image-carousel .item {
     display: block;
-    border: 1px solid #e8e8e8;
 }
 
 .image-carousel .item .image-cover {
@@ -1958,7 +1974,7 @@ a:hover, a:focus {
 .image-carousel .owl-nav .owl-prev:before {
     content: "\e905";
     font-family: 'icomoon';
-    color: #0c0c24;
+    color: #dae6f1;
     font-size: 21px;
     transition: .2s;
 }
@@ -1979,7 +1995,7 @@ a:hover, a:focus {
 .image-carousel .owl-nav .owl-next:before {
     content: "\e905";
     font-family: 'icomoon';
-    color: #0c0c24;
+    color: #dae6f1;
     font-size: 21px;
     transition: .2s;
 }
@@ -2019,16 +2035,13 @@ a:hover, a:focus {
         left: 10px;
     }
 
-    .image-carousel .owl-nav .owl-prev:before {
-        font-size: 41px;
+    .image-carousel .owl-nav .owl-prev:before,
+    .image-carousel .owl-nav .owl-next:before {
+        font-size: 25px;
     }
 
     .image-carousel .owl-nav .owl-next {
         right: 10px;
-    }
-
-    .image-carousel .owl-nav .owl-next:before {
-        font-size: 41px;
     }
 
     .image-carousel.big-image .item {
@@ -2520,18 +2533,20 @@ img.mfp-img {
 
 
 .main-footer {
-    height: 203px;
+    height: 300px;
     background-color: #121236;
     padding: 60px 0;
+    font-family: "OpenSans", sans-serif;
 }
 
 .main-footer .footer-menu {
     list-style: none;
 }
 
-.main-footer .footer-menu > li a {
+.main-footer .footer-menu > li a,
+.main-footer .footer-menu a{
     color: #fff;
-    line-height: 1.71;
+    line-height: 2;
 }
 
 
@@ -2604,6 +2619,8 @@ img.mfp-img {
     font-weight: 500;
     padding: 0 25px;
     position: relative;
+    text-transform: uppercase;
+    font-family: "OpenSans Bold", sans-serif;
 }
 
 
@@ -3080,7 +3097,7 @@ img.mfp-img {
 .popular-promotion > li a {
     font-size: 15px;
     font-weight: 500;
-    font-family: "Roboto Slab", serif;
+    font-family: "OpenSans Regular", serif;
     line-height: 40px;
     border: 1px solid;
     width: 100%;
@@ -3156,7 +3173,6 @@ img.mfp-img {
     .popular-promotion > li a {
         height: 50px;
         line-height: 48px;
-        font-size: 18px;
     }
 
     .popular-promotion.smaller-link > li a {
@@ -3470,6 +3486,7 @@ img.mfp-img {
 
 .social-list > li a {
     font-size: 26px;
+    vertical-align: middle;
 }
 
 .social-list > li a .icon:before {
@@ -3480,25 +3497,18 @@ img.mfp-img {
     opacity: 0.8;
 }
 
-.social-list > li.anonymous {
-    position: relative;
-    top: -6px;
-}
-
 .social-list > li.anonymous .btn {
     color: #797981;
     font-size: 16px;
     border: 2px solid #e8e8e8;
-    padding: 0 15px;
+    padding: 20px 15px;
     height: 28px;
-    line-height: 22px;
+    line-height: 0;
     background-color: transparent;
     cursor: pointer;
     transition: .2s;
-}
-
-.social-list > li.anonymous .btn:hover, .social-list > li.anonymous .btn.active {
-    background-color: #e8e8e8;
+    box-shadow: none;
+    border-radius: 20px;
 }
 
 .social-list.icon-larger > li a {
@@ -3620,7 +3630,8 @@ img.mfp-img {
 
 .table tbody td.company {
     font-weight: 500;
-    color: #0c0c24;
+    color: #29322d;
+    font-family: "OpenSans Bold",sans-serif;
 }
 
 .table tbody td .md-visible {
@@ -3833,6 +3844,7 @@ img.mfp-img {
 }
 
 .testimonial-card .info {
+    height: 100%;
     overflow: hidden;
     text-align: left;
 }
@@ -3882,16 +3894,17 @@ img.mfp-img {
     font-size: 14px;
     line-height: 1.29;
     margin-top: 10px;
+    font-family: "OpenSans Regular",sans-serif;
 }
 
 
 .testimonial-card.shadow {
-    box-shadow: 0px 0px 16px 2px rgba(62, 60, 56, 0.11);
+    box-shadow: 0px 0px 13px 0px rgba(62, 60, 56, 0.11);
 }
 
 @media (max-width: 992px) {
     .testimonial-card .info .name {
-        font-size: 24px;
+        font-size: 20px;
     }
 
     .testimonial-card .info .date {
@@ -3956,31 +3969,23 @@ img.mfp-img {
 
 .testimonials-list-vertical .testimonial-card {
     padding-top: 30px;
-}
-
-.testimonials-list-vertical .testimonial-card .info {
-    padding-left: 165px;
+    margin-bottom: 50px;
 }
 
 .testimonials-list-vertical .testimonial-card .info .name {
-    float: none;
-    display: inline-block;
-    width: 33.33%;
+    display: table;
+    height: 100%;
+}
+.testimonials-list-vertical .testimonial-card .info .name >span
+{
+    display: table-cell;
+    vertical-align: middle;
 }
 
 .testimonials-list-vertical .testimonial-card .info .date {
     float: none;
     display: inline-block;
     width: 33.33%;
-}
-
-.testimonials-list-vertical .testimonial-card .info .star-rating {
-    font-size: 14px;
-    display: inline-block;
-    width: 33.33%;
-    text-align: right;
-
-    list-style: none;
 }
 
 .testimonials-list-vertical .testimonial-card .info .star-rating > li {
@@ -3996,7 +4001,7 @@ img.mfp-img {
 .testimonials-list-vertical .testimonial-card .info .star-rating > li:before {
     content: "\e90e";
     font-family: 'icomoon';
-    color: #ed8028;
+    color: #00d5a6;
 }
 
 .testimonials-list-vertical .testimonial-card .info .star-rating > li.active + li:before,
@@ -4014,16 +4019,22 @@ img.mfp-img {
     content: "\e913";
 }
 
-.testimonials-list-vertical .testimonial-card .rating {
+.testimonials-list-vertical .testimonial-card .rating,
+.testimonials-list-vertical .testimonial-card .date {
     margin-top: 25px;
 }
 
 .testimonials-list-vertical .testimonial-card .rating .title {
     display: inline-block;
     font-size: 14px;
-    color: #797981;
+    color: #747b82;
     line-height: 1.29;
     margin-right: 5px;
+}
+.testimonials-list-vertical .testimonial-card .date
+{
+    font-weight: bold;
+    color: #747b82;
 }
 
 .testimonials-list-vertical .testimonial-card .rating .buttons {
@@ -4066,9 +4077,6 @@ img.mfp-img {
 }
 
 @media (max-width: 992px) {
-    .testimonials-list-vertical .testimonial-card {
-        padding-top: 50px;
-    }
 
     .testimonials-list-vertical .testimonial-card .info {
         padding-left: 0;
@@ -4089,21 +4097,9 @@ img.mfp-img {
     .testimonials-list-vertical .testimonial-card .text {
         text-align: left;
     }
-
-    .testimonials-list-vertical .testimonial-card .rating .title {
-        font-size: 24px;
-    }
-
-    .testimonials-list-vertical .testimonial-card .rating .buttons .up {
-        font-size: 18px;
-    }
-
-    .testimonials-list-vertical .testimonial-card .rating .buttons .value {
-        font-size: 24px;
-    }
-
-    .testimonials-list-vertical .testimonial-card .rating .buttons .down {
-        font-size: 18px;
+    .testimonials-list-vertical .testimonial-card .rating .buttons .up,
+    .testimonials-list-vertical .testimonial-card .rating .buttons .down{
+        font-size: 15px;
     }
 
     .testimonials-list-vertical.md-top-offset {
@@ -4124,18 +4120,13 @@ img.mfp-img {
         display: block;
     }
 
-    .testimonials-list-vertical .testimonial-card .info .star-rating {
-        display: block;
-        text-align: left;
-    }
-
     .testimonials-list-vertical .testimonial-card .rating {
         text-align: left;
     }
 }
 
 .write-review {
-    font-family: "Roboto Slab", serif;
+    font-family: "OpenSans Regular", serif;
     color: #0c0c24;
     font-size: 18px;
     line-height: 1.72;
@@ -4143,6 +4134,7 @@ img.mfp-img {
 
 .write-review .mark {
     color: #ff2250;
+    background-color: transparent;
 }
 
 .write-review .social-title {
@@ -4154,6 +4146,7 @@ img.mfp-img {
     display: inline-block;
     position: relative;
     top: 5px;
+    margin-top: 30px;
 }
 
 .write-review .add-review {
@@ -4197,6 +4190,7 @@ img.mfp-img {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    border-radius: 15px;
 }
 
 .write-review .add-review .form-group .btn:hover, .write-review .add-review .form-group .btn:focus {
@@ -4227,7 +4221,7 @@ img.mfp-img {
 
 @media (max-width: 992px) {
     .write-review .title {
-        font-size: 24px;
+        font-size: 18px;
     }
 
     .write-review .social-title {
@@ -4238,16 +4232,6 @@ img.mfp-img {
 
     .write-review .social-list > li a {
         font-size: 66px;
-    }
-
-    .write-review .social-list > li.anonymous {
-        top: -16px;
-    }
-
-    .write-review .social-list > li.anonymous .btn {
-        height: 66px;
-        line-height: 60px;
-        font-size: 35px;
     }
 
     .write-review .add-review .form-group .title {
@@ -4302,7 +4286,7 @@ img.mfp-img {
     }
 
     .write-review .social-list > li.anonymous .btn {
-        font-size: 35px;
+        font-size: 20px;
     }
 }
 

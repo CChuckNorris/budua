@@ -45,11 +45,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'filter'=>Person::find()->select(['name','id'])->indexBy('id')->column(),
                 'value'=>'person.name'
             ],
-            [
-                'attribute'=>'service_id',
-                'filter'=>Service::find()->select(['name','id'])->indexBy('id')->column(),
-                'value'=>'service.name'
-            ],
                         [
                 'attribute'=>'conference_id',
                 'filter'=>Conference::find()->select(['name','id'])->indexBy('id')->column(),

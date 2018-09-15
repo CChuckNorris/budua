@@ -39,16 +39,6 @@ use common\models\Service;
             'allowClear' => true,
         ],
     ])  ?>
-    
-    <?php $service = Service::find()->select(['name', 'id'])->indexBy('id')->column();?>
-    <?= $form->field($model, 'service_id')->widget(Select2::className(), [
-        'data' => $service,
-        'size' => Select2::MEDIUM,
-        'options' => ['placeholder' => 'Выберите сервис...', 'multiple' => false],
-        'pluginOptions' => [
-            'allowClear' => true,
-        ],
-    ])  ?>
 
     <?= $form->field($model, 'vk_group')->textInput(['maxlength' => true]) ?>
 

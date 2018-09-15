@@ -1,74 +1,135 @@
-<div class="company-info align-left md-align-center">
-    <ul class="company-info-list top-offset">
-        <li>
-            <i class="icon icon-international-delivery"></i>
-            <div class="info">
-                <div class="name">Регион</div>
-                <div class="value"><?= $company["regions"]?> </div>
-            </div>
-        </li>
-        <li>
-            <i class="icon icon-grid-world"></i>
-            <div class="info">
-                <div class="name">Сайт</div>
-                <div class="value">
-                    <?php if($company["site_link"]==1) :?>
-                        <?= \yii\helpers\Html::a($company["site"], $company["site"], ["target" => "_blank"])?>
-                    <?php  else: ?>
-                        <?= $company["site"]; ?>
-                    <?php endif;?>
+<div class="company-info align-left clearfix">
+    <div class="col-md-12 company-info-list top-offset">
 
+        <div class="row">
+            <div class="col-md-6 item">
+                <div class="info-header">
+                    <i class="icon icon-international-delivery"></i>
+                    <span class="title">Регион</span>
+                </div>
+                <div class="info">
+                    <div class="value">
+                        <?= \common\helpers\DefaultString::print_str($company["regions"]) ?>
+                    </div>
                 </div>
             </div>
-        </li>
-        <li>
-            <i class="icon icon-call-answer"></i>
-            <div class="info">
-                <div class="name">Телефон</div>
-                <div class="value"><?= !empty($company["tel"]) ? $company["tel"] : "-" ?></div>
-            </div>
-        </li>
-        <li>
-            <i class="icon icon-mail-black-envelope-symbol"></i>
-            <div class="info">
-                <div class="name">E-MAIL</div>
-                <div class="value"><?= !empty($company["email"]) ? $company["email"] : "-"?>
+
+            <div class="col-md-6 item">
+                <div class="info-header">
+                    <i class="icon icon-grid-world"></i>
+                    <span class="title">Сайт</span>
+                </div>
+                <div class="info">
+                    <div class="value">
+                        <?php if ($company["site_link"] == 1) : ?>
+                            <?= \yii\helpers\Html::a($company["site"], $company["site"], ["target" => "_blank"]) ?>
+                        <?php else: ?>
+                            <?= \common\helpers\DefaultString::print_str($company["site"]); ?>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
-        </li>
-        <li>
-            <i class="icon icon-star-3"></i>
-            <div class="info">
-                <div class="name">Рейтинг</div>
-                <div class="value"><?= $company->getRating(); ?></div>
-            </div>
-        </li>
-        <li>
-            <i class="icon icon-feedback-2"></i>
-            <div class="info">
-                <div class="name">Отзывы</div>
-                <div class="value"><?= $company["reviews"]; ?></div>
-            </div>
-        </li>
-        <li>
-            <i class="icon icon-multiple-users-silhouette"></i>
-            <div class="info">
-                <div class="name">Люди</div>
-                <div class="value"><?= !empty($company["people_string"]) ? $company["people_string"] : "-" ?></div>
-            </div>
-        </li>
-        <li>
-            <i class="icon icon-clock-symbol-of-circular-shape"></i>
-            <div class="info">
-                <div class="name">Возраст домена</div>
-                <div class="value"><?= $company["year"]?></div>
-            </div>
-        </li>
-    </ul>
+        </div>
 
-    <div class="socials">
-        <div class="social-title">Соцсети:</div>
+        <div class="row">
+            <div class="col-md-6 item">
+                <div class="info-header">
+                    <i class="icon icon-call-answer"></i>
+                    <span class="title">Телефон</span>
+                </div>
+                <div class="info">
+                    <div class="value">
+                        <?= \common\helpers\DefaultString::print_str($company["tel"]); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 item">
+                <div class="info-header">
+                    <i class="icon icon-mail-black-envelope-symbol"></i>
+                    <span class="title">E-MAIL</span>
+                </div>
+                <div class="info">
+                    <div class="value">
+                        <?= \common\helpers\DefaultString::print_str($company["email"]); ?>
+                    </div>
+                </div>
+            </div>
 
-        <?= \frontend\components\ProfileSocialsIconsWidget::widget(["vk_group" => $company["vk_group"], "fb_group" => $company["fb_group"]]) ?>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 item">
+                <div class="info-header">
+                    <i class="icon icon-multiple-users-silhouette"></i>
+                    <span class="title">Персоны</span>
+                </div>
+                <div class="info">
+                    <div class="value">
+                        <?php if ($persons = $company->getAuthorizedPersons()): ?>
+                            <?php foreach ($persons as $person): ?>
+                                <p><?= mb_strtolower($person); ?></p>
+                            <?php endforeach; ?>
+                        <?php endif; ?>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-6 item">
+                <div class="info-header">
+                    <i class="icon icon-mail-black-envelope-symbol"></i>
+                    <span class="title">Адрес</span>
+                </div>
+                <div class="info">
+                    <div class="value">
+                        <?= $company->address; ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 socials item">
+                    <div class="social-title">Соцсети:</div>
+                    <?= \frontend\components\ProfileSocialsIconsWidget::widget(["vk_group" => $company["vk_group"], "fb_group" => $company["fb_group"]]) ?>
+            </div>
+            <div class="col-md-6 item">
+                <div class="info-header">
+                    <i class="icon icon-clock-symbol-of-circular-shape"></i>
+                    <span class="title">ЭГРПОУ</span>
+                </div>
+                <div class="info">
+                    <div class="value">32920218</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6 item">
+
+                <div class="info-header">
+                    <i class="icon icon-star-3"></i>
+                    <span class="title">Рейтинг</span>
+                </div>
+                <div class="info">
+                    <div class="value">
+                        <?= $company->getRating(); ?>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 item">
+                <div class="info-header">
+                    <i class="icon icon-feedback-2"></i>
+                    <span class="title">Отзывы</span>
+                </div>
+                <div class="info">
+                    <div class="value">
+                        <?= $company["reviews"]; ?>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </div>
+
 </div>

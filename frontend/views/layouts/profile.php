@@ -10,7 +10,7 @@
 <?php $this->beginPage() ?>
 
 <?= $this->render("header-layout-v2")?>
-    <body>
+    <body class="profile-template">
     <?php $this->beginBody() ?>
     <header class="main-header">
     <?= $this->render("partials/_top_site_bar"); ?>

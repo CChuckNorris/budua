@@ -8,9 +8,9 @@
         <div class="owl-stage" style="transform: translate3d(-1333px, 0px, 0px); transition: 0.25s; width: 2934px;">
             <?php foreach ($items as $id): ?>
                 <div class="owl-item active" style="width: 216.667px; margin-right: 50px;">
-                    <a href="http://www.youtube.com/watch?v=<?= $id; ?>" class="item">
+                    <a href="http://www.youtube.com/watch?v=<?= trim($id); ?>" class="item">
                         <div class="image-cover">
-                            <img src="https://img.youtube.com/vi/<?= $id; ?>/0.jpg">
+                            <img src="https://img.youtube.com/vi/<?= trim($id); ?>/0.jpg">
                         </div>
                     </a>
                 </div>

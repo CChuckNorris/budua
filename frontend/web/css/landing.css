@@ -1,6 +1,6 @@
 
 .main-banner .heading {
-    font-family: "Roboto Slab", serif;
+    font-family: "OpenSans Bold", serif;
     font-size: 45px;
     color: #fff;
     line-height: 1.5;
@@ -316,6 +316,7 @@
 {
     font-size: 15px;
     line-height: 27px;
+    font-family: "ProximaNova", sans-serif;
 }
 
 .section.info-block .content-holder
@@ -464,6 +465,7 @@
 .section.recent-reviews ul li .testimonial-card
 {
     max-height: 385px;
+    min-height: 385px;
     overflow: hidden;
     border-radius: 15px;
 }
@@ -473,6 +475,7 @@
     text-align: justify;
     max-height: 315px;
     overflow: hidden;
+    font-family: "OpenSans", sans-serif;
 }
 .section.recent-reviews .col-md-6 
 {

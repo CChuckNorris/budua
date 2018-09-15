@@ -1,9 +1,4 @@
 <div class="row middle-xs review-section">
-    <div class="col-xs-12 col-md-6">
-        <div class="section-subtitle small top-offset-small bottom-offset-large align-left md-align-center">
-            Отзывы о <?= $entity_name; ?></div>
-    </div>
-
     <?php if (isset($comments[0])): ?>
         <?= \frontend\components\ReviewsSortControlsWidget::widget(
             [

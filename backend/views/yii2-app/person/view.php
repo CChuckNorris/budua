@@ -33,10 +33,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'company_id',
                 'value' => $model->company->name
             ],
-            [
-                'attribute' => 'service_id',
-                'value' => $model->service->name
-            ],
             'raiting',
             'reviews',
             'vk_group',

@@ -30,22 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'company_id',
                 'value' => 'company.name'
             ],
-            [
-                'attribute' => 'service_id',
-                'value' => 'service.name'
-            ],
-            // 'raiting',
-            // 'reviews',
-            // 'vk_group',
-            // 'fb_group',
-            // 'tags:ntext',
-            // 'logo',
-            // 'about:ntext',
-            // 'seo_title',
-            // 'seo_keys:ntext',
-            // 'seo_desc:ntext',
 
-            
         ],
     ]); ?>
 <?php Pjax::end(); ?></div>

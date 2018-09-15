@@ -35,10 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 'value'=> ArrayHelper::getValue($model, 'person.name')
             ],
             [
-                'attribute'=>'service_id',
-                'value'=> ArrayHelper::getValue($model, 'service.name')
-            ],
-            [
                 'attribute'=>'conference_id',
                 'value'=> ArrayHelper::getValue($model, 'conference.name')
             ],

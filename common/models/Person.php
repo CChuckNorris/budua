@@ -13,7 +13,6 @@ use yii\helpers\Url;
  * @property string $name
  * @property string $alias
  * @property integer $company_id
- * @property integer $service_id
  * @property integer $raiting
  * @property integer $reviews
  * @property string $vk_group
@@ -27,7 +26,6 @@ use yii\helpers\Url;
  *
  * @property Conference[] $conferences
  * @property Company $company
- * @property Service $service
  * @property Review[] $reviews0
  */
 class Person extends \yii\db\ActiveRecord implements IPersonEntity
@@ -59,10 +57,9 @@ class Person extends \yii\db\ActiveRecord implements IPersonEntity
             [['name', 'alias'], 'required'],
             [['raiting', 'reviews'], 'integer'],
             [['about', 'seo_keys', 'seo_desc'], 'string'],
-            [['tags', 'company_id', 'service_id', 'activities_ids'], 'safe'],
+            [['tags', 'company_id', 'activities_ids'], 'safe'],
             [['name', 'alias', 'vk_group', 'fb_group', 'seo_title'], 'string', 'max' => 255],
             [['company_id'], 'exist', 'skipOnError' => true, 'targetClass' => Company::className(), 'targetAttribute' => ['company_id' => 'id']],
-            [['service_id'], 'exist', 'skipOnError' => true, 'targetClass' => Service::className(), 'targetAttribute' => ['service_id' => 'id']],
             ['logo','file','skipOnEmpty' => true, 'extensions' => 'png, jpg, gif', 'checkExtensionByMimeType'=>false]
         ];
     }
@@ -92,7 +89,6 @@ class Person extends \yii\db\ActiveRecord implements IPersonEntity
             'name' => 'Имя',
             'alias' => 'name-url',
             'company_id' => 'Компания',
-            'service_id' => 'Сервис',
             'raiting' => 'Рейтинг',
             'reviews' => 'Отзывы',
             'vk_group' => 'Группа Vk',
@@ -153,13 +149,6 @@ class Person extends \yii\db\ActiveRecord implements IPersonEntity
         return $this->hasOne(Company::className(), ['id' => 'company_id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getService()
-    {
-        return $this->hasOne(Service::className(), ['id' => 'service_id']);
-    }
 
     /**
      * @return \yii\db\ActiveQuery

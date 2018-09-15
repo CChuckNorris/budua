@@ -12,13 +12,14 @@ class RatingBadgeProvider
     const CHECKED_CLASS = 'checked-badge';
     const VIP_CLASS = 'vip-badge';
 
-    public function getBadgeClass($risk = 0, $checked = 0, $vip = 0)
+
+    public function getBadgeClass($status)
     {
-        if ($risk) return self::RISK_CLASS;
+        if (CompanyStatuses::RISK_STATUS == $status) return self::RISK_CLASS;
 
-        if ($checked) return self::CHECKED_CLASS;
+        if (CompanyStatuses::CHECKED_STATUS == $status) return self::CHECKED_CLASS;
 
-        if ($vip) return self::VIP_CLASS;
+        if (CompanyStatuses::VIP_STATUS == $status) return self::VIP_CLASS;
 
         return '';
     }
