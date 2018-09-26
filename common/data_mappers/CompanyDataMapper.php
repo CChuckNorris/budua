@@ -27,6 +27,12 @@ class CompanyDataMapper
         return $this->basicQuery()->where(["activity_direction.alias" => $activity_alias])->orderBy(['mod_rating' => SORT_DESC])->asArray()->all();
     }
 
+    public function getCompaniesByRegion($region)
+    {
+        $query = $this->basicQuery()->where(['like', 'regions', $region])->orderBy(['mod_rating' => SORT_DESC]);
+        return $query->asArray()->all();
+    }
+
     public function getSortedBy($sort, $sort_desc)
     {
         $sort_type = $sort_desc == 'desc' ? SORT_DESC : SORT_ASC;

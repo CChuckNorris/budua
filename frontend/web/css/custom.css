@@ -1281,3 +1281,9 @@ ul.companies-rating-list-wiget > li.risk-badge:after
 {
     border-radius: 10px;
 }
+
+.info .value > a
+{
+    color: #00d5a6;
+    text-decoration: underline;
+}

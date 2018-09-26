@@ -5,11 +5,16 @@
             <div class="col-md-6 item">
                 <div class="info-header">
                     <i class="icon icon-international-delivery"></i>
-                    <span class="title">Регион</span>
+                    <span class="title">Регионы</span>
                 </div>
                 <div class="info">
                     <div class="value">
-                        <?= \common\helpers\DefaultString::print_str($company["regions"]) ?>
+                        <?php $regions_arr = explode(",", $company["regions"]);?>
+                        <?php $regions_arr = array_filter(array_map("trim", $regions_arr));?>
+                        <?php foreach ($regions_arr as $region):?>
+                            <?= \yii\helpers\Html::a($region, \yii\helpers\Url::toRoute('regions/'.$region))?>
+                        <?php endforeach;?>
+
                     </div>
                 </div>
             </div>

@@ -49,7 +49,8 @@ return [
                 'all-pages'=>'main/pages',
                 'page/<alias>'=>'main/page',
                 'company/<alias>'=>'main/company',
-                
+                'regions/<region>'=>'regions/index',
+
                 'persons'=>'person/persons',
                 'person/getraiting'=>'person/getraiting',
                 'person/logout/<alias>'=>'person/logout',
