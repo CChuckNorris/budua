@@ -23,7 +23,7 @@ $(document).ready(function () {
         borderColor: '#fff',
         color: '#279fe0',
         hoverColor: '#00d5a6',
-        selectedColor: '#ffd500',
+        selectedColor: '#00d5a6',
         pins: {"32": "Киев", "51": "Одесса", "12": "Днепр", "46": "Львов", "63": "Харьков"},
         selectedRegions: ["32", "12", "51", "46", "63"],
         multiSelectRegion: true,

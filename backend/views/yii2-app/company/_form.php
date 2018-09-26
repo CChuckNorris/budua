@@ -22,25 +22,25 @@ use yii\helpers\Html;
 
     $items = [
         [
-            'label'=>'<i class="glyphicon glyphicon-home"></i> Общая информация',
+            'label'=>'Общая информация',
             'content' => $this->render('_common_info', ['model' => $model, 'form' => $form, 'entityForm' => $entityForm]),
             'active'=>true
         ],
         [
-            'label'=>'<i class="glyphicon glyphicon-user"></i> Настройка рейтинга',
+            'label'=>'Настройка рейтинга',
             'content'=> $this->render('_rating_info', ['model' => $model, 'form' => $form]),
         ],
 
         [
-            'label'=>'<i class="glyphicon glyphicon-user"></i> Медиа (лого, файлы, видео)',
+            'label'=>'Медиа (лого, файлы, видео)',
             'content'=> $this->render('_media_info', ['model' => $model, 'form' => $form]),
         ],
         [
-            'label'=>'<i class="glyphicon glyphicon-user"></i> SEO настройки',
+            'label'=>'SEO настройки',
             'content'=> $this->render('_seo_info', ['model' => $model, 'form' => $form]),
         ],
         [
-            'label'=>'<i class="glyphicon glyphicon-user"></i> Дополнительная информация',
+            'label'=>'Дополнительная информация',
             'content'=> $this->render('_extra_info', ['model' => $model, 'form' => $form]),
         ],
 

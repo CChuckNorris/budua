@@ -19,7 +19,7 @@ use yii\helpers\Url;
 
             <ul class="nav navbar-nav">
                 <li>
-                    <a target="_blank" href="http://seo-stars.top/">Клиентская часть</a>
+                    <a target="_blank" href="<?= Yii::$app->request->hostInfo; ?>">Клиентская часть</a>
                 </li>
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">

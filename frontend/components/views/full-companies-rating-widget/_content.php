@@ -7,13 +7,15 @@ $badgeClass = $widget->getBadgeLabel($model);
         <tr>
             <td class="numb"><?= $key + 1; ?></td>
             <td class="logo">
-              <a href="<?= $widget->getCompanyLink($model['alias'])?>" target="_blank" data-pjax="false">
+              <a href="<?= $widget->getCompanyLink($model['alias'])?>"  data-pjax="false">
                 <?= \yii\helpers\Html::img($widget->getLogoPath($model)) ?>
               </a>
             </td>
             <td class="company">
                 <div class="md-hidden">
-                    <?= $model['name'] ?>
+                    <a href="<?= $widget->getCompanyLink($model['alias'])?>"  data-pjax="false">
+                        <?= $model['name']; ?>
+                    </a>
                 </div>
                 <div class="md-visible">
                     <div class="company-title" data-toggle="#row-<?= $key + 1; ?>"><?= $model['name'] ?></div>
