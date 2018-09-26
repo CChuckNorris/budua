@@ -1,0 +1,90 @@
+.jqvmap-region {
+    cursor: default !important;
+}
+
+#vmap {
+    width: 100%;
+    height: 100%;
+}
+.map-pin {
+    width: 64px;
+    height: 50px;
+    position: absolute;
+    top: -55px;
+    left: -170px;
+    background-size: 32px 32px;
+    background-repeat: no-repeat;
+    text-align: center;
+    background-position: top center;
+    color: #888;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.map-pin span {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    left: 0;
+}
+
+.purple {
+    background-image: url('../../img/purple.png');
+}
+
+.green {
+    background-image: url('../../img/green.png');
+}
+
+.blue {
+    background-image: url('../../img/blue.png');
+}
+
+
+
+/* Setup basic CSS for Label */
+.jqvmap-pin {
+    font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Calibri, Helvetica, Arial, sans-serif;
+    cursor: default;
+}
+
+#jqvmap1_32_pin,
+#jqvmap1_51_pin,
+#jqvmap1_12_pin,
+#jqvmap1_46_pin,
+#jqvmap1_63_pin
+{
+    font-weight: bold;
+    font-size: 17px;
+    font-family: "OpenSans Bold", sans-serif;
+}
+#jqvmap1_32_pin
+{
+    margin-top: -6.25%;
+    margin-left: -13.25%;
+}
+
+#jqvmap1_51_pin
+{
+    margin-top: -8.25%;
+    margin-left: -9.25%;
+}
+
+#jqvmap1_12_pin
+{
+    margin-top: -6.25%;
+    margin-left: -14.25%;
+}
+
+#jqvmap1_46_pin
+{
+    margin-top: -6.25%;
+    margin-left: -14.25%;
+}
+
+#jqvmap1_63_pin
+{
+    margin-top: -5.25%;
+    margin-left: -12.25%;
+}

@@ -60,7 +60,7 @@
 
 .main-banner .features-list > li .caption {
     color: #e7eaf5;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .main-banner .features-list > li:last-child {
@@ -530,4 +530,14 @@
         padding: 35px 0px 30px;
     }
 
+}
+
+.section.map
+{
+    height: 750px;
+}
+
+.section.map > .container
+{
+    height: 100%;
 }

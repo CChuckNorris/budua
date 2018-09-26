@@ -2066,7 +2066,7 @@ a:hover, a:focus {
 
 .logo-header img {
     display: block;
-    width: 170px;
+    width: 150px;
 }
 
 .logo-footer {
@@ -2615,7 +2615,7 @@ img.mfp-img {
 
 .main-menu > li a {
     color: #17191c;
-    font-size: 18px;
+    font-size: 15px;
     font-weight: 500;
     padding: 0 25px;
     position: relative;
@@ -2646,6 +2646,7 @@ img.mfp-img {
 .mobile-menu-btn .icon {
     font-size: 52px;
     color: #fff;
+    vertical-align: middle;
 }
 
 .mobile-menu {
@@ -2695,6 +2696,7 @@ img.mfp-img {
 @media (max-width: 992px) {
     .mobile-menu-btn {
         display: inline-block;
+        height: 70px;
     }
 
     .mobile-menu {
@@ -3436,7 +3438,7 @@ img.mfp-img {
 }
 
 .sidebar .item:last-child {
-    margin-bottom: 0;
+    margin-bottom: 50px;
 }
 
 .sidebar .item .sidebar-title {
@@ -4102,8 +4104,8 @@ img.mfp-img {
         font-size: 15px;
     }
 
-    .testimonials-list-vertical.md-top-offset {
-        margin-top: 75px;
+    .profile-template .testimonials-list-vertical.md-top-offset {
+        margin-top: 30px;
     }
 }
 

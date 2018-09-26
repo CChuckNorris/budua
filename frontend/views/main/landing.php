@@ -33,7 +33,7 @@ $this->registerMetaTag([
 
 <section class="section map">
     <div class="container">
-        <img src="../img/map.png">
+        <?= \frontend\components\MapWidget::widget(); ?>
     </div>
 </section>
 
