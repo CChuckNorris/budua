@@ -27,8 +27,9 @@ $badgeClass = $widget->getBadgeLabel($model);
                             </div>
                         </div>
 
-                        <a href="<?= $widget->getCompanyLink($model['alias']) ?>" class="more-link">Подробнее<i
-                                    class="icon icon-right-arrow"></i></a>
+                        <a href="<?= $widget->getCompanyLink($model['alias']) ?>" class="more-link"  data-pjax="false">
+                            Подробнее<i class="icon icon-right-arrow" ></i>
+                        </a>
                     </div>
                 </div>
             </td>

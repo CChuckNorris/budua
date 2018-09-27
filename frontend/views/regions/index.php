@@ -9,7 +9,7 @@ $this->title = "Застройщики региона " . $region;
 <div class="pinned-block">
 
     <div class="align-center">
-        <h2 class="section-title lined bottom-offset">Застройщики региона <?= $region; ?></h2>
+        <h1 class="section-title lined bottom-offset">Застройщики региона <?= $region; ?></h1>
     </div>
 
     <?= \frontend\components\RatingSortControlsWidget::widget(

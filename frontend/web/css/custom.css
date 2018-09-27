@@ -956,7 +956,7 @@ ul.companies-rating-list-wiget > li.risk-badge:after
    
 }
 
-@media (min-width: 992px) and (max-width: 1024px)
+@media (min-width: 992px) and (max-width: 1220px)
 {
     .main-menu > li a
     {
