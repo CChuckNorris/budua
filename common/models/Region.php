@@ -10,6 +10,10 @@ use Yii;
  * @property integer $id
  * @property string $name
  * @property string $alias
+ * @property string $h1_title
+ * @property string $seo_title
+ * @property string $seo_key
+ * @property string $seo_desc
  */
 class Region extends \yii\db\ActiveRecord
 {
@@ -28,6 +32,7 @@ class Region extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
+            [['h1_title', 'seo_title', 'seo_key', 'seo_desc'], 'string', 'max' => 255],
             [['name', 'alias'], 'string', 'max' => 255],
         ];
     }
@@ -41,6 +46,10 @@ class Region extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Название',
             'alias' => 'Адрес',
+            'h1_title' => 'H1 (Заголовок на странице элемента)',
+            'seo_title' => 'SEO Заголовок',
+            'seo_keys' => 'SEO Ключевые слова',
+            'seo_desc' => 'SEO Описание',
         ];
     }
     public function getAll()
