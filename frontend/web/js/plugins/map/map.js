@@ -3,6 +3,7 @@
 * */
 $(document).ready(function () {
 
+
     function escapeXml(string) {
         return string.replace(/[<>]/g, function (c) {
             switch (c) {
@@ -31,17 +32,32 @@ $(document).ready(function () {
         showTooltip: true,
         onRegionClick: function(element, code, region)
         {
-
+            switch (code) {
+                case "32":
+                    window.location.replace("/regions/Киев");
+                    break;
+                case "12":
+                    window.location.replace("/regions/Днепр");
+                    break;
+                case "51":
+                    window.location.replace("/regions/Одессі");
+                    break;
+                case "46":
+                    window.location.replace("/regions/Львов");
+                    break;
+                case "63":
+                    window.location.replace("/regions/Харьков");
+                    break;
+            }
         },
         onLabelShow : function(event, label, code)
         {
             if (code === "32")
             {
-                label.text("Киев, Борисполь, Буча, Ирпень");
+                label.html("Киев, Борисполь, Буча, Ирпень");
             }
 
-            console.log(code);
-        }
+        },
 
     });
 
