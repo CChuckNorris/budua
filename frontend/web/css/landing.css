@@ -133,8 +133,8 @@
 
 @media (max-width: 992px) {
     .main-banner {
-        padding-top: 100px;
-        padding-bottom: 100px;
+        padding-top: 150px!important;
+        padding-bottom: 150px!important;
     }
 
     .main-banner .heading {
@@ -148,12 +148,17 @@
     .main-banner .features-list > li:last-child {
         margin-bottom: 0;
     }
+
+    .main-banner  .counters .heading
+    {
+        margin-bottom: 50px;
+    }
 }
 
 @media (max-width: 480px) {
     .main-banner {
-        padding-top: 75px;
-        padding-bottom: 75px;
+        padding-top: 100px!important;
+        padding-bottom: 100px!important;
     }
 
     .main-banner .heading {

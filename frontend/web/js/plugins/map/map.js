@@ -40,7 +40,7 @@ $(document).ready(function () {
                     window.location.replace("/regions/Днепр");
                     break;
                 case "51":
-                    window.location.replace("/regions/Одессі");
+                    window.location.replace("/regions/Одесса");
                     break;
                 case "46":
                     window.location.replace("/regions/Львов");

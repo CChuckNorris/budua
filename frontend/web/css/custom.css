@@ -1044,6 +1044,8 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     .table-responsive .table-header
     {
         display: block;
+        margin-top: 25px;
+        margin-bottom: 25px;
     }
     .table-responsive .table-header .columns,
     ul.companies-rating-list-wiget > li
