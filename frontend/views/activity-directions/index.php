@@ -18,7 +18,7 @@ $this->registerMetaTag([
 <div class="pinned-block">
 
     <div class="align-center">
-        <h2 class="section-title lined bottom-offset"><?= $activity->h1_title; ?></h2>
+        <h1 class="section-title lined bottom-offset"><?= $activity->h1_title; ?></h1>
     </div>
 
     <?= \frontend\components\RatingSortControlsWidget::widget(
