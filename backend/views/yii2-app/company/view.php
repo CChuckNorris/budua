@@ -35,7 +35,6 @@ $this->params['breadcrumbs'][] = $this->title;
             'videos',
             'vk_group',
             'fb_group',
-            'regions:ntext',
             'year',
             'tags:ntext',
             'logo',

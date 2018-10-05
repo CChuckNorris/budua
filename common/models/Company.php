@@ -25,7 +25,6 @@ use yii\helpers\Url;
  * @property string $clients
  * @property string $vk_group
  * @property string $fb_group
- * @property string $regions
  * @property string $year
  * @property string $tags
  * @property string $logo
@@ -45,6 +44,8 @@ use yii\helpers\Url;
 class Company extends \yii\db\ActiveRecord implements IBasicEntity
 {
     public $activities_ids;
+
+    public $regions_ids;
 
     public $cases = [];
 
@@ -103,11 +104,11 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             [['mod_rating', 'raiting', 'reviews', 'site_link', 'profile_complete_status'], 'integer'],
             [['about', 'seo_title', 'seo_keys', 'seo_desc',
                 'videos', 'clients', 'rating_status', 'founders', 'court_cases', 'authorized_persons', 'state_register_legal_entities', 'address'], 'string'],
-            [['tags', 'regions'], 'safe'],
+            [['tags'], 'safe'],
             [['name', 'alias', 'site', 'vk_group', 'fb_group', 'tel', 'year'], 'string', 'max' => 255],
             ['email', 'email'],
             [['multiplier'], 'number'],
-            [['activities_ids', 'cases', 'reviews_and_thanks'], 'safe'],
+            [['activities_ids', 'cases', 'reviews_and_thanks', 'regions_ids'], 'safe'],
             ['logo','file','skipOnEmpty' => true, 'extensions' => 'png, jpg, jpeg', 'checkExtensionByMimeType'=>false]
         ];
     }
@@ -130,7 +131,6 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             'clients' => 'Клиенты',
             'vk_group' => 'Группа VK',
             'fb_group' => 'Группа Fb',
-            'regions' => 'Регионы',
             'year' => 'Год',
             'tags' => 'Теги',
             'logo' => 'Лого',
@@ -141,6 +141,7 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             'seo_keys' => 'SEO Ключевые слова',
             'seo_desc' => 'SEO Описание',
             'activities_ids' => 'Направления деятельности',
+            'regions_ids' => 'Регионы',
             'cases' => 'Кейсы',
             'reviews_and_thanks' => 'Отзывы и благодарности клиентов',
             'profile_complete_status' => 'Наполненности профиля(%)',
@@ -216,14 +217,7 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     {
         return static::find()->orderBy('mod_rating DESC')->asArray()->all();
     }
-    public function getCity1()
-    {
-        return static::find()->where(['like', 'regions', 'Москва'])->orderBy('mod_rating DESC')->limit(12)->all();
-    }
-    public function getCity2()
-    {
-        return static::find()->where(['like', 'regions', 'Питер'])->orderBy('mod_rating DESC')->limit(12)->all();
-    }
+
     public function getAllinAlias($name)
     {
         return static::find()->where(['like', 'regions', $name])->orderBy('mod_rating')->limit(12)->all();
@@ -275,20 +269,15 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     }
     public function getTableFromPage($page)
     {
-        $query=static::find();
+        $query = self::find()->joinWith(['regions']);
+
         if($page->regions)
         {
-            $regions=explode(", ", $page->regions);
-            $str="";
-            for($i=0; $i<count($regions); $i++)
-            $str.="regions like '%$regions[$i]%' OR ";
-            $str=substr($str, 0, -4);
-            $query=$query->andFilterWhere(['or', 
-                $str
-            ]);
-            /*$regions=explode(", ", $page->regions);
-            for($i=0; $i<count($regions); $i++)
-                $query=$query->orFilterWhere(['like', 'regions', $regions[$i]]);*/
+            $regions = explode(", ", $page->regions);
+            foreach ($regions as $region)
+            {
+                $query->orWhere(['region.name' => $region]);
+            }
         }
             
         if($page->tags)
@@ -302,7 +291,6 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
                 $str
             ]);
         }
-            //$query=$query->andWhere(['in', 'tags', $page->tags]);
         if($page->limit_rec)
             $query=$query->limit($page->limit_rec);
         else
@@ -322,7 +310,7 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     }
     public static function findBestCompanies()
     {
-        return self::find()->orderBy('mod_rating DESC')->limit(14)->asArray()->all();
+        return self::find()->joinWith(["regions"])->orderBy('mod_rating DESC')->limit(14)->asArray()->all();
     }
     public static function findBestEDCompanies()
     {
@@ -333,6 +321,12 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     {
         return $this->hasMany(ActivityDirection::className(), ['id' => 'activity_id'])
             ->viaTable('company_activities', ['company_id' => 'id']);
+    }
+
+    public function getRegions()
+    {
+        return $this->hasMany(Region::className(), ['id' => 'region_id'])
+            ->viaTable('company_regions', ['company_id' => 'id']);
     }
 
     public function getCasesFiles()

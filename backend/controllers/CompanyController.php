@@ -106,6 +106,11 @@ class CompanyController extends Controller
                 $model->setRelated('activities', $model->activities_ids, true);
             }
 
+            if ($model->regions_ids)
+            {
+                $model->setRelated('regions', $model->regions_ids, true);
+            }
+
             if(UploadedFile::getInstance($model, 'logo'))
             {
                 $model->logo=UploadedFile::getInstance($model, 'logo');
@@ -152,8 +157,7 @@ class CompanyController extends Controller
 
             if($model->tags)
                 $model->tags = implode(", ", $model->tags);
-            if($model->regions)
-                $model->regions = implode(", ", $model->regions);
+
             $model->raiting = 0;
             $model->reviews = 0;
             $model->save(); 
@@ -184,11 +188,11 @@ class CompanyController extends Controller
 
         $model = $this->findModel($id);
         $model->tags=explode(", ", $model->tags);
-        $model->regions=explode(", ", $model->regions);
         $img=$model->logo;
 
         /** Init Activities for Company using relation **/
         $model->activities_ids = $model->activities;
+        $model->regions_ids = $model->regions;
 
         if ($model->load(Yii::$app->request->post()))
         {
@@ -196,6 +200,12 @@ class CompanyController extends Controller
             if ($model->activities_ids) {
                 $model->setRelated('activities', $model->activities_ids, true);
             }
+
+            if ($model->regions_ids)
+            {
+                $model->setRelated('regions', $model->regions_ids, true);
+            }
+
 
             if(UploadedFile::getInstance($model, 'logo'))
             {
@@ -246,8 +256,7 @@ class CompanyController extends Controller
 
             if($model->tags)
                 $model->tags = implode(", ", $model->tags);
-            if($model->regions)
-                $model->regions = implode(", ", $model->regions);
+
             $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         } 

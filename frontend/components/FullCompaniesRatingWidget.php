@@ -45,12 +45,11 @@ class FullCompaniesRatingWidget extends CompaniesRatingWidget
     {
         if (!$regions) return "-";
 
-        $regions_arr = explode(",", $regions);
-        if (empty($regions_arr)) return $regions;
+        if (empty($regions)) return $regions;
 
-        if (count($regions_arr) <= $limit) return $regions;
+        if (count($regions) <= $limit) return implode(", ", array_column($regions, "name"));
 
-        return implode(",", array_slice($regions_arr, 0, $limit));
+        return implode(", ", array_slice(array_column($regions, "name"), 0, $limit));
     }
 
     public function getBadgeLabel($item)

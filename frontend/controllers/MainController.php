@@ -61,9 +61,19 @@ class MainController extends MyController
         $page = (new Pages())->getOneinAlias($alias);
         if ($page->add_table)
             $companies = (new Company())->getTableFromPage($page);
+
         return $this->render('page', [
             'page' => $page,
-            'companies' => $companies
+            'companies' => $companies,
+            'regions' => $page->regions
+        ]);
+    }
+
+    public function actionContacts()
+    {
+        $page = (new Pages())->getOneinAlias("kontakty");
+        return $this->render('contacts', [
+            'page' => $page,
         ]);
     }
 

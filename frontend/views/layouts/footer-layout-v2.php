@@ -39,12 +39,12 @@ use yii\helpers\Url;
             </div>
 
             <div class="col-xs-12 col-ms-2">
-                <ul class="social-list">
+                <ul class="social-list" style="display: none">
                     <li>
-                        <a href="https://www.facebook.com/SEO-Stars-TOP-336355266796266/" target="_blank"><i class="icon icon-facebook-6"></i></a>
+                        <a href="#" target="_blank"><i class="icon icon-facebook-6"></i></a>
                     </li>
                     <li>
-                        <a href="https://www.youtube.com/channel/UCnuuKjaqyDSUT4Xt1PDMmXQ/" target="_blank"><i class="icon icon-youtube-2"></i></a>
+                        <a href="#" target="_blank"><i class="icon icon-youtube-2"></i></a>
                     </li>
                 </ul>
             </div>

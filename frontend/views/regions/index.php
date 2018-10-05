@@ -27,7 +27,8 @@ $this->registerMetaTag([
     <?= \frontend\components\RatingSortControlsWidget::widget(
         [
             "sort" => $sort,
-            "sort_desc" => $sort_desc
+            "sort_desc" => $sort_desc,
+            "region_name" => $region->name
         ]);
     ?>
 

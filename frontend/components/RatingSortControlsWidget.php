@@ -20,12 +20,15 @@ class RatingSortControlsWidget extends Widget
 
     public $sort_desc;
 
+    public $region_name = false;
+
     public function run()
     {
         return $this->render("rating-sort-control-widget/view", [
             "target_url" => $this->target_url,
             "sort" => $this->sort,
-            "sort_desc" => $this->sort_desc
+            "sort_desc" => $this->sort_desc,
+            "region_name" => $this->region_name
         ]);
     }
 

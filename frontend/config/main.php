@@ -50,6 +50,7 @@ return [
                 'page/<alias>'=>'main/page',
                 'company/<alias>'=>'main/company',
                 'regions/<region>'=>'regions/index',
+                'kontakty'=>'main/contacts',
 
                 'persons'=>'person/persons',
                 'person/getraiting'=>'person/getraiting',

@@ -64,10 +64,8 @@ use common\models\Tag;
         <div class="col-md-9">
             <div class="row">
                 <div class="col-md-6">
-                    <?php $regs = Region::find()->select(['name'])->indexBy('name')->column(); ?>
-
-                    <?= $form->field($model, 'regions')->widget(Select2::className(), [
-                        'data' => $regs,
+                    <?= $form->field($model, 'regions_ids')->widget(Select2::className(), [
+                        'data' => \yii\helpers\ArrayHelper::map(Region::find()->asArray()->all(), 'id', 'name'),
                         'size' => Select2::MEDIUM,
                         'options' => ['placeholder' => 'Выберите регион...', 'multiple' => true],
                         'pluginOptions' => [

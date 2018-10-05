@@ -12,10 +12,10 @@ use yii\web\Controller;
  */
 class CompanyRatingSortingController extends Controller
 {
-    public function actionIndex($sort = null, $sort_desc = null)
+    public function actionIndex($sort = null, $sort_desc = null, $region_name = false)
     {
         $companyDataMapper = new CompanyDataMapper(new Company());
 
-        return  \frontend\components\FullCompaniesRatingWidget::widget(['items' => $companyDataMapper->getSortedBy($sort, $sort_desc)]);
+        return  \frontend\components\FullCompaniesRatingWidget::widget(['items' => $companyDataMapper->getSortedBy($sort, $sort_desc, $region_name)]);
     }
 }

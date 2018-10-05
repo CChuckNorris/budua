@@ -29,24 +29,36 @@ class CompanyDataMapper
 
     public function getCompaniesByRegion($region)
     {
-        $query = $this->basicQuery()->where(['like', 'regions', $region])->orderBy(['mod_rating' => SORT_DESC]);
+        $query = $this->basicQuery()->where(['region.name' => $region])->orderBy(['mod_rating' => SORT_DESC]);
         return $query->asArray()->all();
     }
 
-    public function getSortedBy($sort, $sort_desc)
+    public function getSortedBy($sort, $sort_desc, $region_name= false)
     {
         $sort_type = $sort_desc == 'desc' ? SORT_DESC : SORT_ASC;
 
+        $query = $this->basicQuery();
+
+        if ($region_name) {
+            $regions = array_filter(array_map("trim", explode(",", $region_name)));
+            if (count($regions) > 1) {
+                $query->where(["region.name" => $regions]);
+            } else {
+                $query->where(["region.name" => $region_name]);
+            }
+
+        }
+
         if ($sort == 'popular') {
-            return $this->basicQuery()->orderBy(['reviews' => $sort_type])->asArray()->all();
+            return $query->orderBy(['reviews' => $sort_type])->asArray()->all();
         }
 
         if ($sort == 'bad-good') {
-            return $this->basicQuery()->joinWith('reviewsInfo')
+            return $query->joinWith('reviewsInfo')
                 ->select('company.*, SUM(review.stars) as amountStars')->groupBy('company.id')->orderBy(['amountStars' => $sort_type])->asArray()->all();
         }
 
-          return $this->basicQuery()->groupBy('company.id')->orderBy(['created_at' => $sort_type])->asArray()->all();
+          return $query->groupBy('company.id')->orderBy(['created_at' => $sort_type])->asArray()->all();
 
     }
 
@@ -57,6 +69,6 @@ class CompanyDataMapper
 
     private function getRelations()
     {
-        return ["casesFiles", "activities"];
+        return ["casesFiles", "activities", "regions"];
     }
 }

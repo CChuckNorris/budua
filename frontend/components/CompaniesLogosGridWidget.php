@@ -32,12 +32,14 @@ class CompaniesLogosGridWidget extends Widget
 
     public function getRegionsList($regions, $limit = 3)
     {
-        foreach (explode(',', $regions) as $r_key => $region) {
+        if (!$regions) return false;
+
+        foreach ($regions as $r_key => $region) {
             if ($r_key == $limit) {
                 echo "<p class='region'>...</p>";
                 break;
             }
-            echo "<p class='region'>$region</p>";
+            echo "<p class='region'>".$region["name"]."</p>";
         }
     }
 
