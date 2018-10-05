@@ -17,8 +17,17 @@ class RegionDataMapper
         $this->repository = $region;
     }
 
-    public function getdByName($name)
+    public function getByName($name)
     {
         return $this->repository->find()->where(['name' => $name])->one();
+    }
+    public function getByAlias($alias)
+    {
+        return $this->repository->find()->where(['alias' => $alias])->one();
+    }
+
+    public function getAll()
+    {
+        return $this->repository->find()->asArray()->all();
     }
 }
