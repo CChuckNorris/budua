@@ -34,3 +34,10 @@ $this->registerMetaTag([
     <?= \frontend\components\FullCompaniesRatingWidget::widget(['items' => $items]) ?>
 </div>
 
+
+<?php if (!empty($region->about)):?>
+    <div class="section-subtitle small top-offset align-left md-align-center"><h2>О застройщиках региона <?= $region->name; ?></h2></div>
+    <div class="paragraph vertical-offset align-left md-align-center">
+        <?= $region->about?>
+    </div>
+<?php endif; ?>

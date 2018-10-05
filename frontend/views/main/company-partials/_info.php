@@ -1,3 +1,8 @@
+<?php
+
+$RegionLinker = new \frontend\helpers\RegionsLinker();
+?>
+
 <div class="company-info align-left clearfix">
     <div class="col-md-12 company-info-list top-offset">
 
@@ -9,12 +14,7 @@
                 </div>
                 <div class="info">
                     <div class="value">
-                        <?php $regions_arr = explode(",", $company["regions"]);?>
-                        <?php $regions_arr = array_filter(array_map("trim", $regions_arr));?>
-                        <?php foreach ($regions_arr as $region):?>
-                            <?= \yii\helpers\Html::a($region, \yii\helpers\Url::toRoute('regions/'.$region))?>
-                        <?php endforeach;?>
-
+                        <?= $RegionLinker->getRegionsLinked($company["regions"]); ?>
                     </div>
                 </div>
             </div>

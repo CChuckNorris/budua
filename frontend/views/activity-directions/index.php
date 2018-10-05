@@ -33,7 +33,7 @@ $this->registerMetaTag([
 
 
 <?php if (!empty($activity->about)):?>
-    <div class="section-subtitle small top-offset align-left md-align-center">О <?= $activity->title; ?></div>
+    <div class="section-subtitle small top-offset align-left md-align-center"><h2>О <?= $activity->title; ?></h2></div>
     <div class="paragraph vertical-offset align-left md-align-center">
         <?= $activity->about?>
     </div>
