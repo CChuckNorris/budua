@@ -42,7 +42,7 @@ $badgeClass = $widget->getBadgeLabel($model);
             <td>
                 <p class="tip">Рейтинг</p>
                 <p class="none-margin">
-                    <?= $model['raiting'] ?>
+                    <?= $model['mod_rating'] ?>
                 </p>
             </td>
             <td>
