@@ -2,7 +2,7 @@
 $videos = $company->getYoutubeVideoIds();
 ?>
 <?php if (!empty($company["about"]) || $videos):?>
-    <h2 class="section-title lined bottom-offset">О компании</h2>
+    <h2 class="section-title lined bottom-offset">О компании <?= $company->name;?></h2>
 
     <?php if ($videos): ?>
         <div class="paragraph"> <?= $this->render("_youtube", ["links" => $videos]) ?></div>
