@@ -34,19 +34,19 @@ $(document).ready(function () {
         {
             switch (code) {
                 case "32":
-                    window.location.replace("/regions/Киев");
+                    window.location.replace("/regions/kiev");
                     break;
                 case "12":
-                    window.location.replace("/regions/Днепр");
+                    window.location.replace("/regions/dnepr");
                     break;
                 case "51":
-                    window.location.replace("/regions/Одесса");
+                    window.location.replace("/regions/odessa");
                     break;
                 case "46":
-                    window.location.replace("/regions/Львов");
+                    window.location.replace("/regions/lvov");
                     break;
                 case "63":
-                    window.location.replace("/regions/Харьков");
+                    window.location.replace("/regions/harkov");
                     break;
             }
         },

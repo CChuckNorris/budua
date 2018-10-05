@@ -1289,3 +1289,9 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     color: #00d5a6;
     text-decoration: underline;
 }
+
+.empty
+{
+    color: #fff;
+    font-size: 24px;
+}
