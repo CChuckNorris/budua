@@ -7,6 +7,8 @@ use backend\behaviors\CompanyRatingModifierBehavior;
 use common\interfaces\IBasicEntity;
 use EvgenyGavrilov\behavior\ManyToManyBehavior;
 use Yii;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
 use yii\helpers\Url;
 
 /**
@@ -37,6 +39,8 @@ use yii\helpers\Url;
  * @property string $multiplier
  * @property integer $profile_complete_status
  * @property string $rating_status
+ * @property string $created_at
+ * @property string $updated_at
  */
 class Company extends \yii\db\ActiveRecord implements IBasicEntity
 {
@@ -49,6 +53,12 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     public function behaviors()
     {
         return [
+            [
+                'class' => TimestampBehavior::className(),
+                'createdAtAttribute' => 'created_at',
+                'updatedAtAttribute' => 'updated_at',
+                'value' => new Expression('NOW()'),
+            ],
             ManyToManyBehavior::className(),
             'profileChecker' => [
                 'class' => CompanyCompleteProfileBehavior::className()

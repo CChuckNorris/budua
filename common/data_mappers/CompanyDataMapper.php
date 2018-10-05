@@ -42,8 +42,11 @@ class CompanyDataMapper
         }
 
         if ($sort == 'bad-good') {
-            return $this->basicQuery()->joinWith('reviewsInfo')->select('company.*, SUM(review.stars) as amountStars')->groupBy(['review.company_id'])->orderBy(['amountStars' => $sort_type])->asArray()->all();
+            return $this->basicQuery()->joinWith('reviewsInfo')
+                ->select('company.*, SUM(review.stars) as amountStars')->groupBy('company.id')->orderBy(['amountStars' => $sort_type])->asArray()->all();
         }
+
+          return $this->basicQuery()->groupBy('company.id')->orderBy(['created_at' => $sort_type])->asArray()->all();
 
     }
 

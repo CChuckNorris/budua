@@ -35,13 +35,13 @@ use yii\helpers\Url;
 
                 <li title="Дата">
                         <span>
-                        <a href="<?= Url::toRoute([$target_url]); ?>">
+                           <a href="<?= Url::toRoute([$target_url, 'sort_desc' => 'desc']); ?>">
                                 <i class="icon icon-angle-arrow-down up"></i>
                         </a>
                     </span>
                     <span>Дата</span>
                     <span>
-                        <a href="<?= Url::toRoute([$target_url, 'sort_desc' => 'desc']); ?>">
+                        <a href="<?= Url::toRoute([$target_url]); ?>">
                               <i class="icon icon-angle-arrow-down down"></i>
                         </a>
                     </span>
