@@ -18,12 +18,12 @@ $this->registerMetaTag([
 <div class="pinned-block">
 
     <div class="align-center">
-        <h1 class="section-title lined bottom-offset">
+        <h2 class="section-title lined bottom-offset">
             <?php if ($page->h2): ?>
                 <?= $page->h2; ?>
             <?php else: ?>
                 <?= $page->h1; ?>
-            <?php endif; ?></h1>
+            <?php endif; ?></h2>
     </div>
 
     <?= \frontend\components\RatingSortControlsWidget::widget(

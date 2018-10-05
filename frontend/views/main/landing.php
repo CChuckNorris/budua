@@ -40,7 +40,7 @@ $this->registerMetaTag([
 
 <section class="section bg pattern">
     <div class="align-center">
-        <h1 class="section-title lined bottom-offset">Лучшие застройщики</h1>
+        <h2 class="section-title lined bottom-offset">Лучшие застройщики</h2>
     </div>
     <div class="row">
         <?= \frontend\components\CompaniesLogosGridWidget::widget(["items" => $companyRatings->getTopCompanies(), "target_url" => "main/company", "template" => 3]) ?>
@@ -62,7 +62,7 @@ $this->registerMetaTag([
         <div class="container">
             <div class="col-md-6 content-holder">
                 <div class="info">
-                    <h1 class="section-title lined bottom-offset"> <?= $infoBlock1->getHeader() ?></h1>
+                    <h2 class="section-title lined bottom-offset"> <?= $infoBlock1->getHeader() ?></h2>
                     <div class="content">
                         <?= $infoBlock1->getContent() ?>
                     </div>
