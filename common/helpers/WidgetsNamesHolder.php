@@ -17,4 +17,6 @@ class WidgetsNamesHolder
     const HORIZONTAL_BANNER = "horizontal_banner";
 
     const INFO_BLOCK_1 = "info_block_1";
+
+    const MAIN_MENU = "main_menu";
 }

@@ -6,6 +6,7 @@ use common\helpers\WidgetsNamesHolder;
 use common\models\CountersTopPageWidgetSettings;
 use common\models\HorizontalBannerWidgetSettings;
 use common\models\InfoBlock1WidgetSettings;
+use common\models\MainMenuWidgetSettings;
 use common\models\RegionsWidgetSettings;
 use common\models\SidebarBannerWidgetSettings;
 use Yii;
@@ -36,8 +37,13 @@ class WidgetsSettingsFactory
         }
 
         if (WidgetsNamesHolder::INFO_BLOCK_1 == $widget_id) {
-            /** @var HorizontalBannerWidgetSettings */
+            /** @var InfoBlock1WidgetSettings */
             return new InfoBlock1WidgetSettings();
+        }
+
+        if (WidgetsNamesHolder::MAIN_MENU == $widget_id) {
+            /** @var MainMenuWidgetSettings */
+            return new MainMenuWidgetSettings();
         }
     }
 }
