@@ -21,13 +21,13 @@ use yii\helpers\Url;
 
                 <li title="Популярность">
                     <span>
-                          <a href="<?= Url::toRoute([$target_url, 'sort' => 'popular', 'sort_desc' => 'desc', 'region_name' => $region_name]); ?>">
+                          <a href="<?= Url::toRoute([$target_url, 'sort' => 'popular', 'sort_desc' => 'desc', 'region_name' => $region_name, 'activity_alias' => $activity_alias]); ?>">
                               <i class="icon icon-angle-arrow-down up"></i>
                           </a>
                     </span>
                     <span>Популярность</span>
                     <span>
-                        <a href="<?= Url::toRoute([$target_url, 'sort' => 'popular', 'region_name' => $region_name]); ?>">
+                        <a href="<?= Url::toRoute([$target_url, 'sort' => 'popular', 'region_name' => $region_name, 'activity_alias' => $activity_alias]); ?>">
                               <i class="icon icon-angle-arrow-down down"></i>
                         </a>
                     </span>
@@ -35,13 +35,13 @@ use yii\helpers\Url;
 
                 <li title="Дата">
                         <span>
-                           <a href="<?= Url::toRoute([$target_url, 'sort_desc' => 'desc', 'region_name' => $region_name]); ?>">
+                           <a href="<?= Url::toRoute([$target_url, 'sort_desc' => 'desc', 'region_name' => $region_name, 'activity_alias' => $activity_alias]); ?>">
                                 <i class="icon icon-angle-arrow-down up"></i>
                         </a>
                     </span>
                     <span>Дата</span>
                     <span>
-                        <a href="<?= Url::toRoute([$target_url, 'region_name' => $region_name]); ?>">
+                        <a href="<?= Url::toRoute([$target_url, 'region_name' => $region_name, 'activity_alias' => $activity_alias]); ?>">
                               <i class="icon icon-angle-arrow-down down"></i>
                         </a>
                     </span>
@@ -50,14 +50,14 @@ use yii\helpers\Url;
                 <li title="Негатив/Позитив">
 
                       <span>
-                         <a href="<?= Url::toRoute([$target_url, 'sort' => 'bad-good',  'sort_desc' => 'desc', 'region_name' => $region_name]); ?>">
+                         <a href="<?= Url::toRoute([$target_url, 'sort' => 'bad-good',  'sort_desc' => 'desc', 'region_name' => $region_name, 'activity_alias' => $activity_alias]); ?>">
                                <i class="icon icon-angle-arrow-down up"></i>
                          </a>
                     </span>
                     <span>Позитив/Негатив</span>
 
                     <span>
-                        <a href="<?= Url::toRoute([$target_url, 'sort' => 'bad-good', 'region_name' => $region_name]); ?>">
+                        <a href="<?= Url::toRoute([$target_url, 'sort' => 'bad-good', 'region_name' => $region_name, 'activity_alias' => $activity_alias]); ?>">
                             <i class="icon icon-angle-arrow-down down"></i>
                         </a>
                     </span>

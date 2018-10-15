@@ -33,7 +33,7 @@ class CompanyDataMapper
         return $query->asArray()->all();
     }
 
-    public function getSortedBy($sort, $sort_desc, $region_name= false)
+    public function getSortedBy($sort, $sort_desc, $region_name = false, $direction = false)
     {
         $sort_type = $sort_desc == 'desc' ? SORT_DESC : SORT_ASC;
 
@@ -46,7 +46,11 @@ class CompanyDataMapper
             } else {
                 $query->where(["region.name" => $region_name]);
             }
+        }
 
+        if ($direction)
+        {
+            $query->where(["activity_direction.alias" => $direction]);
         }
 
         if ($sort == 'popular') {

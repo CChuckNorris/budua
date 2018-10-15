@@ -22,13 +22,16 @@ class RatingSortControlsWidget extends Widget
 
     public $region_name = false;
 
+    public $activity_alias = false;
+
     public function run()
     {
         return $this->render("rating-sort-control-widget/view", [
             "target_url" => $this->target_url,
             "sort" => $this->sort,
             "sort_desc" => $this->sort_desc,
-            "region_name" => $this->region_name
+            "region_name" => $this->region_name,
+            "activity_alias" => $this->activity_alias
         ]);
     }
 
