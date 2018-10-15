@@ -542,6 +542,14 @@ ul.sort li {
     .main-footer .footer-menu>li {
         margin-bottom: 0px;
     }
+    .footer-menu a
+    {
+        display: block;
+    }
+    .recent-reviews .image-cover
+    {
+        padding-right: 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1294,4 +1302,41 @@ ul.companies-rating-list-wiget > li.risk-badge:after
 {
     color: #fff;
     font-size: 24px;
+}
+
+/*
+* Menu
+*/
+@media (max-width: 992px)
+{
+    .logo-header {
+        margin-left: 0px;
+    }
+    .main-header > .container,
+    #desktopMainMenu
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .main-header > .container > .row
+    {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 374px)
+{
+
+    .section > .row > .container,
+    .container.counters
+    {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .mobile-menu .main-menu > li a
+    {
+        font-size: 18px;
+    }
+
 }

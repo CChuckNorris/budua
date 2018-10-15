@@ -10,25 +10,6 @@ use yii\helpers\Url;
                     <img src="<?=\yii\helpers\Url::to("/img/logo-white.png")?>" alt="Seo-stars">
                 </a>
             </div>
-            <div class="col-xs-12 col-ms-2 col-sm-2">
-                <ul class="footer-menu">
-                    <li>
-                        <a href="<?=Url::toRoute(['main/index']);?>">Главная</a>
-                    </li>
-                    <li>
-                        <a href="<?=Url::toRoute(['/app']);?>">Заявка на продвижение</a>
-                    </li>
-                    <li>
-                        <a href="<?=Url::toRoute(['main/pages']);?>">Карта сайта</a>
-                    </li>
-                    <li>
-                        <a href="<?= Url::toRoute(['main/contact']);?>">Контакты</a>
-                    </li>
-                    <li>
-                        <a href="<?=Url::toRoute(['main/about']);?>">О сайте</a>
-                    </li>
-                </ul>
-            </div>
 
             <div class="col-xs-12 col-ms-2 footer-menu">
                 <?= Yii::$app->theme->getFooterLinks();?>
