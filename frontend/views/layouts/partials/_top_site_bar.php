@@ -1,7 +1,7 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-xs-4 col-md-2 col-lg-3">
+            <div class="col-xs-4 col-md-2">
                 <a href="<?= Yii::$app->homeUrl; ?>" class="logo-header">
                     <img src="<?= \yii\helpers\Url::to("/img/logo-header.png")?>" alt="Seo-stars">
                 </a>

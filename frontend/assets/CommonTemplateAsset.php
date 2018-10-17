@@ -20,5 +20,6 @@ class CommonTemplateAsset extends TemplateV2Asset
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapPluginAsset',
+        'frontend\assets\TemplateV2Asset'
     ];
 }
