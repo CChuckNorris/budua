@@ -191,6 +191,7 @@
     height: 410px;
     background-color: #fff;
     overflow: hidden;
+    z-index: 100;
 }
 
 .logo-company-rating-widget.template3 .rating-companies-list > li.sub-item

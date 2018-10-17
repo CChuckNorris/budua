@@ -14,11 +14,13 @@ class TemplateV2Asset extends AssetBundle
     public $css = [
         'css/bundle.css',
         'css/landing.css',
-        'css/custom.css'
+        'css/custom.css',
+        'css/slicknav.css'
 
     ];
     public $js = [
         'js/init/data-toggle.js',
+        'js/init/jquery.slicknav.js',
         'js/init/mobile-menu.js',
         'js/main.js',
     ];

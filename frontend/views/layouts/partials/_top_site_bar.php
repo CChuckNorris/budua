@@ -6,14 +6,10 @@
                     <img src="<?= \yii\helpers\Url::to("/img/logo-header.png")?>" alt="Seo-stars">
                 </a>
             </div>
-            <div id="desktopMainMenu" class="col-xs-8 end-xs col-md-8 start-md">
+            <div id="top-menu-holder" class="col-xs-8 end-xs col-md-9 start-md">
 
                 <?= $this->render("_menu"); ?>
-                <button class="mobile-menu-btn"><i class="icon icon-menu-button"></i></button>
-                <div id="tabletMainMenu" class="mobile-menu">
-                    <button class="mobile-menu-btn mobile-menu-btn-close"><i class="icon icon-menu-button"></i>
-                    </button>
-                </div>
+
             </div>
         </div>
     </div>

@@ -18,6 +18,13 @@
     top: 0;
 
 }
+
+#top-menu-holder
+{
+    position: relative;
+}
+
+
 .image-carousel .item .image-cover,
 .image-carousel.owl-carousel .owl-item img,
 .video-carousel .image-cover,
@@ -35,6 +42,8 @@
 {
     float: none;
 }
+
+
 #review-block .form-group
 {
     margin-bottom: 0;
@@ -1312,8 +1321,7 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     .logo-header {
         margin-left: 0px;
     }
-    .main-header > .container,
-    #desktopMainMenu
+    .main-header > .container
     {
         padding-left: 0;
         padding-right: 0;
@@ -1334,9 +1342,4 @@ ul.companies-rating-list-wiget > li.risk-badge:after
         padding-left: 0;
         padding-right: 0;
     }
-    .mobile-menu .main-menu > li a
-    {
-        font-size: 18px;
-    }
-
 }
