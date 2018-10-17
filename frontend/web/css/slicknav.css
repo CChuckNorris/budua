@@ -14,7 +14,6 @@
 
 .slicknav_menu {
     display:none;
-    width: 100%;
 }
 
 @media screen and (max-width: 992px) {
@@ -230,6 +229,9 @@ ul.slicknav_nav
 {
     background-color: #fff;
     line-height: 50px;
+    text-align: right;
+    font-weight: bold;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
 }
 
 ul.slicknav_nav > li a
