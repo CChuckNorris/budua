@@ -27,9 +27,11 @@ class RegionsController extends Controller
         $result = [];
 
         /** @var Region $Region */
-        if ($Region = $regionDataMapper->getByAlias($region))
-        {
+        if ($Region = $regionDataMapper->getByAlias($region)) {
             $result = $companyDataMapper->getCompaniesByRegion($Region->name);
+        } else {
+            \Yii::$app->response->setStatusCode(404);
+            $this->redirect('/site/404');
         }
 
         return $this->render("index",
