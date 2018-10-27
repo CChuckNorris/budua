@@ -1343,3 +1343,9 @@ ul.companies-rating-list-wiget > li.risk-badge:after
         padding-right: 0;
     }
 }
+
+.reviews-news .nav-tabs h2
+{
+    font-size: 15px;
+    margin: 0;
+}

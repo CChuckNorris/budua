@@ -41,7 +41,7 @@ $this->registerMetaTag([
 
 $items = [
     [
-        'label' => 'Отзывы о компании '.$company['name'],
+        'label' => '<h2>Отзывы о компании '.$company['name'].'</h2>',
         'content' => $this->render("company-partials/_reviews", [
             "model" => $model,
             "company" => $company,
@@ -55,7 +55,7 @@ $items = [
         'active' => true
     ],
     [
-        'label' => 'Новости',
+        'label' => '<h2>Новости</h2>',
         'content' => \frontend\components\SocialNewsWidget::widget(
             [
                 "entity" => $company,
