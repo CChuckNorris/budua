@@ -8,7 +8,6 @@ namespace backend\helpers;
  */
 class ProfileRatingCounter
 {
-    private $profile_completion;
 
     private $multiplier;
 
@@ -20,9 +19,9 @@ class ProfileRatingCounter
      * ProfileRatingCounter constructor.
      * @param array $options
      */
-    public function __construct($options = ['profile_completion' => 0, 'multiplier' => 0, 'base_rating' => 0])
+    public function __construct($options = ['multiplier' => 0, 'base_rating' => 0])
     {
-        $this->profile_completion = $options['profile_completion'];
+
         $this->multiplier = $options['multiplier'];
         $this->rating = $options['base_rating'];
 
@@ -30,14 +29,7 @@ class ProfileRatingCounter
 
     public function calculate()
     {
-        /** get percents */
-        $this->profile_completion *= 0.01;
-
-        if ($this->rating == 0) {
-            $this->rating = round($this->profile_completion);
-        }
-
-        $this->mod_rating = $this->rating * $this->profile_completion * $this->multiplier;
+        $this->mod_rating = $this->rating * $this->multiplier;
 
         return round($this->mod_rating, 0, PHP_ROUND_HALF_UP);
     }

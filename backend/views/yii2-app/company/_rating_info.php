@@ -3,10 +3,6 @@ use kartik\touchspin\TouchSpin;
 use kartik\select2\Select2;
 ?>
 <div class="row">
-
-    <div class="col-md-4">
-        <?= \frontend\components\ProfileCompleteStatusBarWidget::widget(["percents" => $model->profile_complete_status, "caption" => "Профиль заполнен на "])?>
-    </div>
     <div class="col-md-8">
         <div class="row">
             <div class="col-md-3">
@@ -27,9 +23,7 @@ use kartik\select2\Select2;
                 $form->field($model, 'mod_rating')->textInput(['maxlength' => true, "disabled" => true])
                 ?>
             </div>
-            <div class="col-md-3">
-                <?= $form->field($model, 'profile_complete_status')->textInput(['maxlength' => true, "disabled" => true]); ?>
-            </div>
+
             <div class="col-md-2">
                 <?= $form->field($model, 'multiplier')->widget(TouchSpin::classname(), [
                     'options'=>['placeholder'=>'Введите мультипликатор'],

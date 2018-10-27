@@ -61,9 +61,9 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
                 'value' => new Expression('NOW()'),
             ],
             ManyToManyBehavior::className(),
-            'profileChecker' => [
+            /*'profileChecker' => [
                 'class' => CompanyCompleteProfileBehavior::className()
-            ],
+            ],*/
             'ratingModifier' => [
                 'class' => CompanyRatingModifierBehavior::className()
             ],

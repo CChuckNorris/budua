@@ -39,14 +39,6 @@ $this->params['breadcrumbs'][] = $this->title;
                 ],
                 'raiting',
                 'reviews',
-                [
-                    'attribute' => 'profile_complete_status',
-                    'content' => function ($model) use ($ProfileCompletionColor) {
-                        return "<p class='text-center' style='background-color:" . $ProfileCompletionColor->getColor($model->profile_complete_status) . ";'> 
-                                    <span class='btn btn-info'>" . $model->profile_complete_status . " </span>
-                                </p>";
-                    }
-                ],
                 // 'vk_group',
                 // 'fb_group',
                 // 'regions:ntext',

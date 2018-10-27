@@ -30,7 +30,6 @@ class CompanyRatingModifierBehavior extends AttributeBehavior
     private function calculateRating()
     {
         $options = [
-            'profile_completion' => $this->owner->profile_complete_status,
             'multiplier' => $this->owner->multiplier,
             'base_rating' => $this->owner->raiting,
         ];
