@@ -59,6 +59,12 @@ class MainController extends MyController
     {
         $companies = [];
         $page = (new Pages())->getOneinAlias($alias);
+
+        if ($page == null)  {
+            Yii::$app->response->setStatusCode(404);
+            $this->redirect('/site/404');
+        }
+
         if ($page->add_table)
             $companies = (new Company())->getTableFromPage($page);
 

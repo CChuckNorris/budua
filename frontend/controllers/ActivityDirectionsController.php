@@ -30,6 +30,12 @@ class ActivityDirectionsController extends Controller
         /** @var ActivityDirection $activity */
         $activity = $activityDirections->getByAlias($slug);
 
+        if ($activity == null)
+        {
+            Yii::$app->response->setStatusCode(404);
+            $this->redirect('/site/404');
+        }
+
         $result = $companyDataMapper->getCompaniesByActivity($slug);
 
         return $this->render("index",
