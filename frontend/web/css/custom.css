@@ -22,6 +22,7 @@
 #top-menu-holder
 {
     position: relative;
+    max-width: 100%;
 }
 
 

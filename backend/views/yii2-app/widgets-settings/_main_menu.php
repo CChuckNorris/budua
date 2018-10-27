@@ -81,6 +81,25 @@ $targets = [
         </div>
 
     </div>
+    <div class="row">
+
+        <div class="col-md-3">
+            <?= $form->field($model, 'link_href4')->textInput() ?>
+        </div>
+
+        <div class="col-md-3">
+            <?= $form->field($model, 'link_name4')->textInput() ?>
+        </div>
+
+        <div class="col-md-3">
+            <?= $form->field($model, 'link_target4')->dropDownList($targets) ?>
+        </div>
+
+        <div class="col-md-3">
+            <?= $form->field($model, 'link_title4')->textInput() ?>
+        </div>
+
+    </div>
 
 
     <div class="form-group">
