@@ -16,6 +16,7 @@ use yii\helpers\Url;
  *
  * @property integer $id
  * @property string $name
+ * @property string $subtitle
  * @property string $alias
  * @property string $site
  * @property string $address
@@ -103,7 +104,7 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             [['name', 'alias'], 'required'],
             [['mod_rating', 'raiting', 'reviews', 'site_link', 'profile_complete_status'], 'integer'],
             [['about', 'seo_title', 'seo_keys', 'seo_desc',
-                'videos', 'clients', 'rating_status', 'founders', 'court_cases', 'authorized_persons', 'state_register_legal_entities', 'address'], 'string'],
+                'videos', 'clients', 'rating_status', 'founders', 'court_cases', 'authorized_persons', 'state_register_legal_entities', 'address', 'subtitle'], 'string'],
             [['tags'], 'safe'],
             [['name', 'alias', 'site', 'vk_group', 'fb_group', 'tel', 'year'], 'string', 'max' => 255],
             ['email', 'email'],
@@ -151,7 +152,8 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             'court_cases' => 'Судебные дела',
             'authorized_persons' => 'Уполномоченные лица (укажите через запятую)',
             'state_register_legal_entities' => 'ЕГРПОУ',
-            'address' => 'Адрес'
+            'address' => 'Адрес',
+            'subtitle' => 'Подзаголовок'
         ];
     }
 
@@ -159,6 +161,11 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
     public function getName()
     {
         return $this->name;
+    }
+
+    public function getSubtitle()
+    {
+        return $this->subtitle;
     }
 
     public function getLogo()

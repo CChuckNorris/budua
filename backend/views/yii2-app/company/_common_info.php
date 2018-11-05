@@ -7,10 +7,13 @@ use common\models\Tag;
 
 ?>
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
             <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
         </div>
-        <div class="col-md-6">
+        <div class="col-md-4">
+            <?= $form->field($model, 'subtitle')->textInput(['maxlength' => true]) ?>
+        </div>
+        <div class="col-md-4">
             <?= $form->field($model, 'alias')->textInput(['maxlength' => true]) ?>
         </div>
 
