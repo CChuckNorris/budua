@@ -104,7 +104,9 @@ $RegionLinker = new \frontend\helpers\RegionsLinker();
                     <span class="title">ЭГРПОУ</span>
                 </div>
                 <div class="info">
-                    <div class="value">32920218</div>
+                    <div class="value">
+                        <?= \common\helpers\DefaultString::print_str($company["state_register_legal_entities"]); ?>
+                    </div>
                 </div>
             </div>
         </div>
