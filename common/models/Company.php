@@ -33,6 +33,7 @@ use yii\helpers\Url;
  * @property string $founders
  * @property string $court_cases
  * @property string $authorized_persons
+ * @property string $cea_activities
  * @property string $state_register_legal_entities
  * @property string $e-mail
  * @property string $tel
@@ -104,7 +105,7 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             [['name', 'alias'], 'required'],
             [['mod_rating', 'raiting', 'reviews', 'site_link', 'profile_complete_status'], 'integer'],
             [['about', 'seo_title', 'seo_keys', 'seo_desc',
-                'videos', 'clients', 'rating_status', 'founders', 'court_cases', 'authorized_persons', 'state_register_legal_entities', 'address', 'subtitle'], 'string'],
+                'videos', 'clients', 'rating_status', 'founders', 'court_cases', 'authorized_persons', 'cea_activities', 'state_register_legal_entities', 'address', 'subtitle'], 'string'],
             [['tags'], 'safe'],
             [['name', 'alias', 'site', 'vk_group', 'fb_group', 'tel', 'year'], 'string', 'max' => 255],
             ['email', 'email'],
@@ -151,6 +152,7 @@ class Company extends \yii\db\ActiveRecord implements IBasicEntity
             'founders' => 'Учредители',
             'court_cases' => 'Судебные дела',
             'authorized_persons' => 'Уполномоченные лица (укажите через запятую)',
+            'cea_activities' => 'Виды деятельности (по КВЭД)',
             'state_register_legal_entities' => 'ЕГРПОУ',
             'address' => 'Адрес',
             'subtitle' => 'Подзаголовок'
