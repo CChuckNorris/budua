@@ -1,5 +1,6 @@
 <?php ;
 
+use backend\modules\blog\widgets\AnnouncedArticlesWidget;
 use kartik\tabs\TabsX;
 
 \frontend\assets\ProfileAsset::register($this);
@@ -80,6 +81,10 @@ $items = [
             ?>
         </div>
     </div>
+
+<div class="row">
+    <?= AnnouncedArticlesWidget::widget([]);?>
+</div>
 
 <?= $this->render("/layouts/_h-banner-template"); ?>
 

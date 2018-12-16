@@ -13,6 +13,12 @@ return [
     'controllerNamespace' => 'frontend\controllers',
     'defaultRoute' => 'main',
     'language' => 'ru',
+    'modules' => [
+        "blog" =>
+            [
+                "class" => \backend\modules\blog\Module::class
+            ]
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
@@ -59,6 +65,10 @@ return [
 
                 'about'=>'main/about',
                 'contact'=>'main/contact',
+                'blog'=>'blog/posts',
+                'blog/posts/<slug>'=>'blog/posts/post',
+                'blog/categories/<slug>'=>'blog/categories/category',
+                'blog/tags/<slug>'=>'blog/tags/tag',
 
                 'types/<slug>' => 'activity-directions/get-by-type',
                 'app' => 'request-service/request',

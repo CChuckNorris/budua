@@ -886,6 +886,10 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     border-color: #00d5a6!important;
     color: #fff!important;
 }
+.pagination > li > a, .pagination > li > span
+{
+    padding: 6px 0px;
+}
 .pagination li a
 {
     color: #414844!important;
@@ -897,7 +901,7 @@ ul.companies-rating-list-wiget > li.risk-badge:after
 }
 .pagination li
 {
-    margin-right: 10px!important;
+    margin-right: 30px!important;
     display: inline-block!important;
     font-family: "OpenSans",sans-serif;
 }

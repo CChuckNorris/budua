@@ -1,0 +1,278 @@
+
+
+.blog-wrapper .common-banner .title
+{
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3em;
+}
+.blog-wrapper hr
+{
+    margin: 0;
+}
+.blog-wrapper .single .category,
+.blog-wrapper .single .date
+{
+    margin: 20px 0;
+    color: #5e6973;
+}
+
+.blog-wrapper
+{
+    font-family: "OpenSans Regular",sans-serif;
+}
+.blog-wrapper ul
+{
+    list-style: initial;
+}
+.blog-wrapper .single .content ol,
+.blog-wrapper .single .content ul
+{
+    padding-left: 50px;
+}
+
+.blog-wrapper .single .preview img
+{
+    display: inherit;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+.blog-wrapper .single .tags
+{
+    margin: 20px 0;
+}
+.blog-wrapper .single .title
+{
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.blog
+{
+    width: 100%;
+    margin: 0;
+    font-family: "OpenSans Regular", sans-serif;
+    color: #6a6a71;
+}
+
+.common-banner .title
+{
+    color: #fff;
+    z-index: 999999;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 4.5em;
+    top: 130px;
+    text-align: center;
+}
+
+.blog .post
+{
+    position: relative;
+    margin-top: 20px;
+    display: table;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    border: 1px solid #e4e4e4;
+    border-top: 5px solid #00d5a6;
+}
+
+span.colored.white
+{
+    color: #fff;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+}
+.blog .pagination
+{
+    width: 100%;
+    text-align: center;
+}
+.blog .pagination li a
+{
+    padding: 6px 12px;
+}
+
+.blog .footer
+{
+    position: absolute;
+    width: 100%;
+    right: 0;
+    bottom: 15px;
+}
+
+.blog .footer div
+{
+    width: 100%;
+}
+
+.blog .post .cover,
+.blog .post .content
+{
+    display: table-cell;
+    float: none;
+    vertical-align: middle;
+}
+.blog .post,
+.blog .footer,
+.blog .post .cover
+{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.blog .post h2
+{
+    margin: 10px 0;
+    font-size: 1.8em;
+}
+
+.blog .post:last-child
+{
+    margin-bottom: 50px;
+}
+
+@media (max-width: 980px)
+{
+    .section
+    {
+        padding-top: 0;
+    }
+
+    .blog-wrapper .single .preview img
+    {
+        width: 100%;
+    }
+    .blog
+    {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .blog .post
+    {
+        display: block;
+    }
+
+    .blog .post .content
+    {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .blog .post .category
+    {
+        text-align: left;
+        padding-top: 10px;
+    }
+
+    .blog .post .tags
+    {
+        text-align: left;
+    }
+
+
+    .blog .post .footer
+    {
+        position: initial;
+    }
+
+    .blog .post h2
+    {
+        font-size: 19px;
+    }
+    .blog .post .cover
+    {
+        display: block;
+        float: none;
+        width: 100%;
+    }
+
+    .blog .post .footer div
+    {
+        width: 100%;
+        padding-bottom: 10px;
+    }
+
+    .blog .post
+    {
+        width: 100%;
+    }
+}
+
+.blog-wrapper table {
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.blog-wrapper table td, .blog-wrapper table th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+}
+.blog-wrapper table a
+{
+    color: #fff!important;
+}
+.blog-wrapper table tbody td {
+    font-size: 13px;
+}
+.blog-wrapper table tr:nth-child(even) {
+    background: #D0E4F5;
+}
+.blog-wrapper table thead {
+    background: #1C6EA4;
+    background: -moz-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: -webkit-linear-gradient(top, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    background: linear-gradient(to bottom, #5592bb 0%, #327cad 66%, #1C6EA4 100%);
+    border-bottom: 2px solid #444444;
+}
+.blog-wrapper table thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #FFFFFF;
+    border-left: 2px solid #D0E4F5;
+}
+.blog-wrapper table thead th:first-child {
+    border-left: none;
+}
+
+.blog-wrapper table tfoot {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background: #D0E4F5;
+    background: -moz-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    background: -webkit-linear-gradient(top, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    background: linear-gradient(to bottom, #dcebf7 0%, #d4e6f6 66%, #D0E4F5 100%);
+    border-top: 2px solid #444444;
+}
+.blog-wrapper table tfoot td {
+    font-size: 14px;
+}
+.blog-wrapper table tfoot .links {
+    text-align: right;
+}
+.blog-wrapper table tfoot .links a{
+    display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+}
+
+html,
+body {
+    margin:0;
+    padding:0;
+    height:100%;
+}
+
+.blog-wrapper
+{
+    min-height: 100%;
+
+    /* Equal to height of footer */
+    /* But also accounting for potential margin-bottom of last child */
+}

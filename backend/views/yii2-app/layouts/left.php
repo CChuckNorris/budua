@@ -28,8 +28,18 @@
                     ['label' => 'Настройки виджетов', 'icon' => 'fa fa-tags', 'url' => ['/widgets-settings']],
                     ['label' => 'Отзывы', 'icon' => 'fa fa-tags', 'url' => ['/review']],
                     ['label' => 'Страницы', 'icon' => 'fa fa-tags', 'url' => ['/pages']],
-                    #['label' => 'Таблицы на главной', 'icon' => 'fa fa-tags', 'url' => ['/mainpage/view']],
-                   # ['label' => 'Заявки', 'icon' => 'fa fa-tags', 'url' => ['/request-service']],
+                    [
+                        'label' => 'Блог',
+                        'icon' => 'fa fa-tags',
+                        'url' => ['#'],
+                        'items' => [
+
+                                ["label" => "Статьи", "url" => "/yii-admin/blog/dashboard/posts"],
+                                ["label" => "Теги", "url" => "/yii-admin/blog/dashboard/tags"],
+                                ["label" => "Категории", "url" => "/yii-admin/blog/dashboard/categories"]
+                        ]
+                    ],
+
                 ],
             ]
         ) ?>
