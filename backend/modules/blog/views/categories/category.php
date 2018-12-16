@@ -1,5 +1,14 @@
 <?php
-$this->title = $model->name;
+$this->title = $model->seo_title;
+
+$this->registerMetaTag([
+    'name' => 'description',
+    'content' => $model->seo_description
+]);
+$this->registerMetaTag([
+    'name' => 'keywords',
+    'content' => $model->seo_keys
+]);
 
 use yii\widgets\Breadcrumbs;
 
