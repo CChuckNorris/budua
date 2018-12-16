@@ -46,7 +46,7 @@ $this->registerMetaTag([
         <?= \frontend\components\CompaniesLogosGridWidget::widget(["items" => $companyRatings->getTopCompanies(), "target_url" => "main/company", "template" => 3]) ?>
     </div>
     <div class="row">
-        <?= Html::a("Все застройщики", Url::to('/raiting'), ['class' => 'btn btn-rounded']) ?>
+        <?= Html::a("Все застройщики", Url::to('/rating'), ['class' => 'btn btn-rounded']) ?>
     </div>
 </section>
 

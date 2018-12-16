@@ -121,16 +121,14 @@ class ReviewController extends Controller
     public function actionDelete($id)
     {
         $model = $this->findModel($id);
-        $arr=[0=>-2, 1=>-2, 2=>-1, 3=>1, 4=>2, 5=>3];
-        if($model->company_id)
-            $sec=Company::findOne(['id'=>$model->company_id]);
-        elseif($model->person_id)
-            $sec=Person::findOne(['id'=>$model->person_id]);        
-
-        $sec->raiting=$sec->raiting-$arr[$model->stars];
-        $sec->reviews=$sec->reviews-1;
-        $sec->save();   
-        
+        $arr = [0 => -2, 1 => -2, 2 => -1, 3 => 1, 4 => 2, 5 => 3];
+        if ($model->company_id) {
+            if ($sec = Company::findOne(['id' => $model->company_id])) {
+                $sec->raiting = $sec->raiting - $arr[$model->stars];
+                $sec->reviews = $sec->reviews - 1;
+                $sec->save();
+            }
+        }
         $model->delete();
 
         return $this->redirect(['index']);

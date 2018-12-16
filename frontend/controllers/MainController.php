@@ -83,18 +83,9 @@ class MainController extends MyController
         ]);
     }
 
-    public function actionRaiting()
+    public function actionRating($alias = "rating")
     {
-        $this->layout = "common";
-        /** @var CompanyDataMapper $companyDataMapper */
-        $companyDataMapper = new CompanyDataMapper(new Company());
-        $companies = $companyDataMapper->getAll();
-        $seo = Theme::findOne(['id'=>1]);
-
-        return $this->render('raiting',[
-            'companies'=> $companies,
-            'seo'=> $seo
-        ]);
+        return $this->actionPage($alias);
     }
 
     public function actionCompany($alias, $uforom=false)

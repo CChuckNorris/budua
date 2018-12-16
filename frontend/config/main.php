@@ -51,7 +51,7 @@ return [
             'showScriptName' => false,
             'rules' => [
                 ''=>'main/index',
-                'raiting'=>'main/raiting',
+                'rating' => 'main/rating',
                 'all-pages'=>'main/pages',
                 'page/<alias>'=>'main/page',
                 'company/<alias>'=>'main/company',
