@@ -101,7 +101,7 @@ $banners=Banner::findBanners();
                 <li><a <?php if(strripos(Url::to(''), "about")!==false) echo 'class="activelink"';?> href="<?=Url::toRoute(['main/about']);?>">О сайте</a></li><br />
             </div> 
             <div class="col-sm-1">
-                <a href="https://www.facebook.com/SEO-Stars-TOP-336355266796266/"><img style="width: 65px;" src="/frontend/web/mt/img/facebookbottom.png" /></a>
+                <a href="#"><img style="width: 65px;" src="/frontend/web/mt/img/facebookbottom.png" /></a>
             </div>
         </div>
     </div>

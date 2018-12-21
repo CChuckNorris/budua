@@ -7,7 +7,7 @@ use yii\helpers\Url;
         <div class="row center-xs start-ms">
             <div class="col-xs-12 col-ms-2 ">
                 <a href="<?=Url::toRoute(['main/index']);?>" class="logo-footer">
-                    <img src="<?=\yii\helpers\Url::to("/img/logo-white.png")?>" alt="Seo-stars">
+                    <img src="<?=\yii\helpers\Url::to("/img/logo-white.png")?>" alt="budua.top">
                 </a>
             </div>
 

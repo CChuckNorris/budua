@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-2">
                 <a href="<?= Yii::$app->homeUrl; ?>" class="logo-header">
-                    <img src="<?= \yii\helpers\Url::to("/img/logo-header.png")?>" alt="Seo-stars">
+                    <img src="<?= \yii\helpers\Url::to("/img/logo-header.png")?>" alt="budua.top">
                 </a>
             </div>
             <div id="top-menu-holder" class="col-md-9">
