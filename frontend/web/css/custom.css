@@ -813,6 +813,12 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     padding: 0;
 }
 
+.companies-rating-list-wiget tr td.logo a
+{
+    max-height: 95px;
+    overflow: hidden;
+}
+
 .companies-rating-list-wiget tr td.logo img
 {
     width: 100px;
@@ -1335,6 +1341,14 @@ ul.companies-rating-list-wiget > li.risk-badge:after
     {
         width: 100%;
         margin: 0;
+    }
+    .announced {
+        text-align: center;
+    }
+
+    .announced .col-md-4
+    {
+        float: none;
     }
 }
 
