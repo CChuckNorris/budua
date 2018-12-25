@@ -176,7 +176,7 @@ class FileUploaderManager implements IFileUploader
                 $previews[$size] = $link_to_thumb;
             }
 
-            $links [] = ["origin" => $origin_name, "previews" => $previews];
+            $links [] = ["origin_path"=> $path_origin."/".$origin_name, "origin" => $origin_name, "previews" => $previews];
         }
         return $links;
     }
