@@ -132,6 +132,13 @@ span.colored.white
     margin-bottom: 50px;
 }
 
+@media (max-width: 992px) {
+
+    .blog-wrapper .content iframe {
+        width: 100% !important;
+    }
+}
+
 @media (max-width: 980px)
 {
     .section

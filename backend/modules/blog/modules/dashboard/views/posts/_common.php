@@ -87,7 +87,23 @@ use kartik\switchinput\SwitchInput;
         <div class="col-md-12">
             <?= $form->field($model, 'text')->widget(CKEditor::className(), [
                 'options' => ['rows' => 6],
-                'preset' => 'full'
+                'preset' => 'full',
+                'clientOptions' => [
+                    'extraPlugins' => '',
+                    'height' => 500,
+
+                    //Here you give the action who will handle the image upload
+                    'filebrowserUploadUrl' => \yii\helpers\Url::to(['cke-file-upload/upload']),
+
+                    'toolbarGroups' => [
+                        ['name' => 'undo'],
+                        ['name' => 'basicstyles', 'groups' => ['basicstyles', 'cleanup']],
+                        ['name' => 'paragraph', 'groups' => ['list', 'indent', 'blocks', 'align', 'bidi' ]],
+                        ['name' => 'styles'],
+                        ['name' => 'links', 'groups' => ['links', 'insert']]
+                    ]
+
+                ]
             ]); ?>
         </div>
     </div>
