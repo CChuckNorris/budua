@@ -815,6 +815,7 @@ ul.companies-rating-list-wiget > li.risk-badge:after
 
 .companies-rating-list-wiget tr td.logo a
 {
+    display: inline;
     max-height: 95px;
     overflow: hidden;
 }

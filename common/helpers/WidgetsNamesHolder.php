@@ -19,4 +19,6 @@ class WidgetsNamesHolder
     const INFO_BLOCK_1 = "info_block_1";
 
     const MAIN_MENU = "main_menu";
+
+    const YANDEX_RTB = "yandex_rtb";
 }

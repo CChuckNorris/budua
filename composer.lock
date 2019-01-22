@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7b11e526d2278d7ece2299b312fae5f8",
+    "content-hash": "d12bb0af612a9da99a965ddc0528d175",
     "packages": [
         {
             "name": "2amigos/yii2-ckeditor-widget",
@@ -1424,6 +1424,63 @@
             "time": "2016-12-15T09:30:02+00:00"
         },
         {
+            "name": "mackrais/yii2-crop-image-section",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mackrais/yii2-crop-image-section.git",
+                "reference": "3d0fbc3d2038ec3e3a50621a85fdd1e4246f4cf5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mackrais/yii2-crop-image-section/zipball/3d0fbc3d2038ec3e3a50621a85fdd1e4246f4cf5",
+                "reference": "3d0fbc3d2038ec3e3a50621a85fdd1e4246f4cf5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "mackrais\\cropimage\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD 3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Oleh Boiko",
+                    "email": "mackraiscms@gmail.com",
+                    "homepage": "http://mackrais.com"
+                }
+            ],
+            "description": "Cropping widget yii2 by section. The widget supports transparent background png,gif",
+            "homepage": "https://github.com/mackrais/yii2-crop-image-section",
+            "keywords": [
+                "Context",
+                "click",
+                "crop",
+                "crop and zoom",
+                "cropping",
+                "extension",
+                "menu",
+                "mouse",
+                "widget",
+                "yii2",
+                "zoom"
+            ],
+            "time": "2017-09-16T07:41:36+00:00"
+        },
+        {
             "name": "moonlandsoft/yii2-phpexcel",
             "version": "1.1.0",
             "source": {
@@ -1575,50 +1632,6 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
-        },
-        {
-            "name": "purrweb/yii2-heroku",
-            "version": "1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/PurrWeb/yii2-heroku.git",
-                "reference": "ea99076cf1f57db5f6c220ca293d83f74f33b041"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/PurrWeb/yii2-heroku/zipball/ea99076cf1f57db5f6c220ca293d83f74f33b041",
-                "reference": "ea99076cf1f57db5f6c220ca293d83f74f33b041",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "~2.0"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "purrweb\\heroku\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Dmitriy Krista",
-                    "email": "dmitriy.krista@gmail.com"
-                }
-            ],
-            "description": "Generate yii2 environments for easy deployment on heroku",
-            "homepage": "https://github.com/PurrWeb/yii2-heroku",
-            "keywords": [
-                "deploy",
-                "extension",
-                "generator",
-                "heroku",
-                "yii2"
-            ],
-            "time": "2015-06-30T09:43:40+00:00"
         },
         {
             "name": "rmrevin/yii2-fontawesome",
@@ -1913,52 +1926,6 @@
             "time": "2016-03-17T03:29:28+00:00"
         },
         {
-            "name": "yiisoft/yii2-codeception",
-            "version": "2.0.6",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/yiisoft/yii2-codeception.git",
-                "reference": "086c8c2d28736e7a484a7a8611b5cc84024e9fb3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/086c8c2d28736e7a484a7a8611b5cc84024e9fb3",
-                "reference": "086c8c2d28736e7a484a7a8611b5cc84024e9fb3",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": ">=2.0.4"
-            },
-            "type": "yii2-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "yii\\codeception\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Jebri",
-                    "email": "mark.github@yandex.ru"
-                }
-            ],
-            "description": "The Codeception integration for the Yii framework",
-            "keywords": [
-                "codeception",
-                "yii2"
-            ],
-            "abandoned": "codeception/codeception",
-            "time": "2017-05-22T12:08:21+00:00"
-        },
-        {
             "name": "yiisoft/yii2-composer",
             "version": "2.0.4",
             "source": {
@@ -2218,6 +2185,96 @@
             "time": "2016-04-07T12:29:16+00:00"
         },
         {
+            "name": "purrweb/yii2-heroku",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/PurrWeb/yii2-heroku.git",
+                "reference": "ea99076cf1f57db5f6c220ca293d83f74f33b041"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/PurrWeb/yii2-heroku/zipball/ea99076cf1f57db5f6c220ca293d83f74f33b041",
+                "reference": "ea99076cf1f57db5f6c220ca293d83f74f33b041",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "purrweb\\heroku\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dmitriy Krista",
+                    "email": "dmitriy.krista@gmail.com"
+                }
+            ],
+            "description": "Generate yii2 environments for easy deployment on heroku",
+            "homepage": "https://github.com/PurrWeb/yii2-heroku",
+            "keywords": [
+                "deploy",
+                "extension",
+                "generator",
+                "heroku",
+                "yii2"
+            ],
+            "time": "2015-06-30T09:43:40+00:00"
+        },
+        {
+            "name": "yiisoft/yii2-codeception",
+            "version": "2.0.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yiisoft/yii2-codeception.git",
+                "reference": "086c8c2d28736e7a484a7a8611b5cc84024e9fb3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/086c8c2d28736e7a484a7a8611b5cc84024e9fb3",
+                "reference": "086c8c2d28736e7a484a7a8611b5cc84024e9fb3",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": ">=2.0.4"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "yii\\codeception\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Mark Jebri",
+                    "email": "mark.github@yandex.ru"
+                }
+            ],
+            "description": "The Codeception integration for the Yii framework",
+            "keywords": [
+                "codeception",
+                "yii2"
+            ],
+            "abandoned": "codeception/codeception",
+            "time": "2017-05-22T12:08:21+00:00"
+        },
+        {
             "name": "yiisoft/yii2-debug",
             "version": "2.0.6",
             "source": {
@@ -2370,7 +2427,8 @@
     "stability-flags": {
         "kartik-v/yii2-widget-select2": 20,
         "tonyaxo/yii2-recaptcha": 20,
-        "kartik-v/yii2-widget-fileinput": 20
+        "kartik-v/yii2-widget-fileinput": 20,
+        "mackrais/yii2-crop-image-section": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

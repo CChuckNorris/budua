@@ -60,6 +60,15 @@ class WidgetSettingsProvider
         return $this->dataMapper->findByPrimaryKey($key)->options;
     }
 
+    public function getYandexRTBWidgetSettings()
+    {
+        /** @var WidgetsNamesHolder $class_name */
+        $class_name = get_class($this->WidgetsNamesHolder);
+        $key = $class_name::YANDEX_RTB;
+
+        return $this->dataMapper->findByPrimaryKey($key)->options;
+    }
+
     /**
      * @return InfoBlock
      */

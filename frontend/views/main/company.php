@@ -1,6 +1,10 @@
 <?php ;
 
 use backend\modules\blog\widgets\AnnouncedArticlesWidget;
+use common\data_mappers\WidgetSettingsDataMapper;
+use common\helpers\WidgetsNamesHolder;
+use common\managers\WidgetSettingsProvider;
+use common\models\WidgetsSettings;
 use kartik\tabs\TabsX;
 
 \frontend\assets\ProfileAsset::register($this);
@@ -88,5 +92,6 @@ $items = [
 
 <?= $this->render("/layouts/_h-banner-template"); ?>
 
+<?= \frontend\components\YandexRTBWidget::widget();?>
 
 <?= $this->render("/alerts/_auth_alert") ?>

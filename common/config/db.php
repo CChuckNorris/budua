@@ -8,7 +8,7 @@ $db = [
     ],
     "local" => [
         "host"=> 'localhost',
-        "dbname" => 'budua',
+        "dbname" => 'budua_live',
         "username" => 'root',
         "password" => ''
     ],

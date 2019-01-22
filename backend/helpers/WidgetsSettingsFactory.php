@@ -9,6 +9,7 @@ use common\models\InfoBlock1WidgetSettings;
 use common\models\MainMenuWidgetSettings;
 use common\models\RegionsWidgetSettings;
 use common\models\SidebarBannerWidgetSettings;
+use common\models\YandexRTBWidgetSettings;
 use Yii;
 
 class WidgetsSettingsFactory
@@ -44,6 +45,11 @@ class WidgetsSettingsFactory
         if (WidgetsNamesHolder::MAIN_MENU == $widget_id) {
             /** @var MainMenuWidgetSettings */
             return new MainMenuWidgetSettings();
+        }
+
+        if (WidgetsNamesHolder::YANDEX_RTB == $widget_id) {
+            /** @var MainMenuWidgetSettings */
+            return new YandexRTBWidgetSettings();
         }
     }
 }
