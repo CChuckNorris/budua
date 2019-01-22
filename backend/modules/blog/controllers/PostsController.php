@@ -3,7 +3,9 @@ namespace backend\modules\blog\controllers;
 
 use backend\modules\blog\modules\dashboard\managers\PostManager;
 
+use backend\modules\blog\modules\dashboard\managers\ReviewManager;
 use backend\modules\blog\modules\dashboard\models\Post;
+use backend\modules\blog\modules\dashboard\models\Reviews;
 use yii\base\Module;
 use yii\data\ArrayDataProvider;
 use yii\web\Controller;
@@ -14,12 +16,17 @@ use yii\web\Controller;
  */
 class PostsController extends Controller
 {
-
     public $layout = "/blog";
 
     /** @var mixed|\yii\web\Session **/
     protected $Session;
 
+    /**
+     * PostsController constructor.
+     * @param $id
+     * @param Module $module
+     * @param array $config
+     */
     public function __construct($id, Module $module, array $config = [])
     {
         parent::__construct($id, $module, $config);
@@ -48,10 +55,13 @@ class PostsController extends Controller
         /** @var PostManager $postManager */
         $postManager = new PostManager(new Post());
 
+        $reviewManager = new ReviewManager(new Reviews());
+
         if ($postManager->findEntityBySlug($slug))
         {
             return $this->render('_post', [
                 'model' => $postManager->getEntity(),
+                'reviews' => $reviewManager->getReviewsByPostID($postManager->getEntityID())
             ]);
         }
 
@@ -60,4 +70,10 @@ class PostsController extends Controller
 
     }
 
+    public function actionLike($postID)
+    {
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        return "OK";
+    }
 }

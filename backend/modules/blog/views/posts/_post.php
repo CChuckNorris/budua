@@ -63,3 +63,6 @@ echo Breadcrumbs::widget([
     </div>
 
 </div>
+
+
+<?= $this->render("partials/_reviews", ["post_id" => $model->id, "reviews" => $reviews]);?>

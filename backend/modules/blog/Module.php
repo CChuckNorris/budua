@@ -11,8 +11,14 @@ class Module extends \yii\base\Module
         $this->modules = [
             'dashboard' => [
                 // you should consider using a shorter namespace here!
-                'class' => \backend\modules\blog\modules\dashboard\Module::class,
+                'class' => '\backend\modules\blog\modules\dashboard\Module',
             ],
         ];
+
+
+        $this->setAliases([
+            '@blog' => $this->getBasePath()
+        ]);
+
     }
 }

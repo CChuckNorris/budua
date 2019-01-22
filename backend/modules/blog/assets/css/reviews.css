@@ -1,0 +1,304 @@
+/*
+
+*   Sort Controls BEGIN
+
+*/
+
+.dropdown-wrapper {
+
+    width: 100%;
+
+    position: relative;
+
+    text-align: right;
+
+}
+
+.dropdown-wrapper .ae-select {
+
+    padding: 8px;
+
+    position: relative;
+
+    height: 20px;
+
+    padding-right: 20px;
+
+}
+
+.dropdown-wrapper .ae-select.chosen {
+
+    color: #333;
+
+}
+
+.dropdown-wrapper .ae-select .down-icon, .ae-select .up-icon {
+
+    position: absolute;
+
+    right: 8px;
+
+    top: 7px;
+
+}
+
+.dropdown-wrapper .ae-dropdown .sortcontrols-menu {
+
+    background: #fff;
+
+    width: 245px;
+
+    box-shadow: 0 0 16px 2px rgba(62, 60, 56, .07);
+
+    border-radius: 0px;
+
+    position: absolute;
+
+    padding: 10px 20px 10px 20px;
+
+    margin-top: 10px;
+
+    right: 0;
+
+    z-index: 1;
+
+    list-style: none;
+
+
+}
+
+.dropdown-wrapper .ae-dropdown .ae-select, .dropdown-wrapper .ae-dropdown .sortcontrols-menu > li {
+
+    cursor: pointer;
+
+}
+
+.dropdown-wrapper .ae-dropdown .sortcontrols-menu > li > a:focus, .dropdown-wrapper .ae-dropdown .sortcontrols-menu > li > a:hover {
+
+    background: none;
+
+}
+
+.dropdown-wrapper .ae-disabled {
+
+    pointer-events: none;
+
+}
+
+.ae-hide {
+
+    display: none;
+}
+
+.ae-show {
+    display: block!important;
+}
+
+
+ul.sortcontrols-menu {
+
+    list-style-type: none;
+
+}
+
+ul.sortcontrols-menu {
+
+    margin: 0px;
+
+    padding: 5px;
+
+}
+
+ul.sortcontrols-menu li {
+
+    padding: 5px 0px;
+
+}
+
+ul.sortcontrols-menu li.selected {
+
+    padding: 5px 0px;
+
+}
+
+.ae-select-content {
+
+    font-weight: bold;
+
+}
+
+.down-icon:after {
+
+    content: "\e900";
+
+    font-family: icomoon;
+
+    font-size: 10px;
+
+}
+
+.dropdown-title, .ae-dropdown.dropdown {
+
+    display: inline-block;
+
+}
+
+.review-loader {
+
+    display: none;
+
+    width: 44px;
+
+    vertical-align: middle;
+
+}
+
+/*
+
+*   Sort Controls END
+
+*/
+
+.up {
+
+    display: inline-block;
+
+    border: none;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    padding: 0 5px;
+
+    -webkit-transform: rotate(180deg);
+
+    transform: rotate(180deg);
+
+    color: #1ccf75 !important;
+
+}
+
+.down {
+
+    display: inline-block;
+
+    border: none;
+
+    background-color: transparent;
+
+    cursor: pointer;
+
+    font-size: 10px;
+
+    padding: 0 5px;
+
+    color: #ff2250 !important;
+
+}
+
+.testimonial-card
+{
+    margin-bottom: 50px;
+}
+
+.testimonials-list-vertical .testimonial-card .rating,
+.testimonials-list-vertical .testimonial-card .date
+{
+    margin-top: 25px;
+}
+
+
+.blog-wrapper ul.star-rating
+{
+    text-align: right!important;
+}
+
+@media (max-width: 992px) {
+    .post-reviews {
+        float: none!important;
+    }
+
+    .testimonials-list-vertical .testimonial-card .rating .title,
+    .testimonials-list-vertical .testimonial-card .rating .buttons .value
+    {
+        font-size: 16px!important;
+    }
+
+    .review-section .col-md-6 {
+        float: none;!important;
+    }
+    .reviews
+    {
+        overflow-x: hidden;
+        width: 100%;
+    }
+    .section .section-subtitle.bottom-offset-large
+    {
+        margin-bottom: 0!important;
+    }
+    .testimonials-list-vertical .testimonial-card .info
+    {
+        padding-left: 0!important;
+    }
+
+    .review-section .dropdown-wrapper
+    {
+        margin-top: 45px;
+        font-size: 18px;
+    }
+
+    .blog-wrapper .write-review .mark
+    {
+        display: block;
+        background-color: transparent;
+    }
+
+    .blog-wrapper  .write-review .social-list>li.anonymous .btn
+    {
+        font-size: 25px;
+        height: 56px;
+    }
+
+
+    .blog-wrapper .dropdown-wrapper .ae-dropdown .sortcontrols-menu
+    {
+        width: 260px;
+        z-index: 9999;
+        text-align: right;
+    }
+
+    .testimonials-list-vertical .testimonial-card .info .name
+    {
+        display: block!important;
+        float:none!important;
+    }
+    .testimonials-list-vertical .testimonial-card .info .star-rating
+    {
+        display: none!important;
+    }
+
+    .testimonial-card .round-photo .image-cover
+    {
+        text-align: left;
+    }
+
+    .testimonial-card
+    {
+        padding-left: 20px!important;
+        padding-right: 20px!important;
+    }
+}
+
+
+.blog-wrapper .empty
+{
+    color: #000!important;
+}
+
+.blog-wrapper .pagination li.active a
+{
+    text-align: center;
+}
